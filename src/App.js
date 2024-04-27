@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import { createContext, useState } from "react";
+import {Layout , Home ,Contact ,About ,Challenges, Projects} from "./pages";
+import { Route , Routes } from "react-router";
+
+
+export const ModeContext = createContext();
 
 function App() {
+  const [mode , setMode] = useState('dark');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ModeContext.Provider  value={{mode,setMode}}>
+    <div className={`app ${mode}`}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="" element={<Home />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="challenges" element={<Challenges />} />
+            <Route path="projects" element={<Projects />} />
+          </Route>
+        </Routes>
     </div>
+    </ModeContext.Provider>
   );
 }
 

@@ -1,0 +1,111 @@
+
+.home__top{
+    height:450px;
+    margin: 2rem auto;
+    border: 2px solid #777;
+    padding: 1rem;
+    display: flex;
+    align-items:center;
+    gap: 1rem;
+    border-radius: 1rem;
+
+    .home__img{
+        height:415px;
+    }
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.home__intro{
+    flex: 1;
+    .home__job{
+        max-width: 390px;
+        color: var(--mainSpecial-color);
+       // color: #fff;
+        font-size: 5rem;
+        font-weight: 400;
+        font-family: "Jersey 25", sans-serif;
+        line-height: 1;
+        span{
+            position: relative;
+            top: -30px;
+            font-family: tahoma;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--subSpecial-color);
+            line-height: 30px;
+            white-space: nowrap;
+        }
+    }
+
+    .home__name{
+        position: relative;
+        top: .5rem;
+        font-size:15px;
+        letter-spacing: 1px;
+
+        span{
+            position: relative;
+            padding-left: 5px;
+        }
+
+        & span::before{
+            opacity: .5;
+            position: absolute;
+            content: '';
+            width: 3px;
+            height: 6px;
+            background: #fff;
+            left: -12px;
+            top: -5px;
+            z-index: 0;
+            border-radius: 0 2px 2px 0;
+
+            animation: cofee-anim 1.3s ease-in-out forwards infinite;
+        }
+    }
+
+    .home-__desc{
+        position: relative;
+        top: -30px;
+        line-height: 2;
+        color: var(--subText-color);
+        color: #5799ef;
+        color: #999;
+        max-width: 450px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        font-family: tahoma;
+        margin: 0 !important;
+    }
+}
+
+.home-top__contact{
+    flex:1;
+    height:410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    .contact{
+        width:100%;
+        height: 40%;
+        aspect-ratio: 1 / 1;
+        background:#554949;
+        box-shadow: 1px 1px 1px 1px #37363541;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes cofee-anim {
+    to{
+        top: -7px;
+        opacity: 0;
+    }
+}

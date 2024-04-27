@@ -1,0 +1,46 @@
+/// media queury min-width
+/// 
+
+@mixin min-width($size){
+    @media (min-width:$size){@content;}
+}
+
+/// media queury min-max-width
+/// 
+
+@mixin min-max-width($from,$to){
+   $limit:calc($to - 1px); 
+   @media only screen and (min-width:$from) and (max-width:$limit) {@content;}
+}
+
+/// center-circle
+/// 
+
+@mixin center-circle($dymention){
+    width:$dymention;
+    height: $dymention;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/// skill
+/// 
+
+@mixin skill($dark,$light){
+    color: $dark;
+    background: $light;
+    border: 1px solid $dark;
+}
+
+/// preformans
+/// 
+
+@mixin ability($prop,$value){
+    -webkit-#{$prop} : $value;
+    -moz-#{$prop} : $value;
+    -o-#{$prop} : $value;
+    $prop : $value;
+}
+

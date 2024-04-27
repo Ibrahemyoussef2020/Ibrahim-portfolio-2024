@@ -1,0 +1,76 @@
+.home__projects{
+    overflow: hidden;
+    padding: 2rem ;
+    .header{
+        margin-bottom: 2rem;
+        @include min-max-width(0,500px){
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        h2{
+            font-size:2.2rem;
+            font-weight: 900;
+            font-family: "Jersey 25", sans-serif;
+            letter-spacing:2px;
+        }
+
+        .filters{
+            display: flex;
+            box-shadow: -1px -1px 3px 2px var(--subBg-color); 
+            
+            button{
+                padding: .5rem .75rem;
+                background-color: var(--secondaryBg-color);
+                font-size: 1.3rem;
+                @extend %popularTras;
+            
+
+                &.selected{
+                    background-color: var(--subSpecial-color);
+                    color:var(--bright-color);
+                }
+
+                &:not(:last-child){
+                    border-right: 1px solid var(--subBg-color);
+                }
+            }
+        }
+    }
+
+    .projects{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        article{
+            max-width: 350px;
+            flex: 1;
+        }
+
+        @include min-width(1200px){
+            padding: 0 10rem;
+        }
+
+        @include min-width(1350px){
+            padding: 0;
+        }
+    }
+
+    .more-items{
+        margin: 4rem 0 1rem;
+        text-align: center;
+
+        a{
+            padding: .5rem 1rem;
+            border: 1px solid #777;
+            font-size: 1.5rem;
+            border-radius: .5rem;
+            background-color:var(--secondaryBg-color);
+            border: 1px solid #fff;
+            outline: none;
+        }
+    }
+}
+
