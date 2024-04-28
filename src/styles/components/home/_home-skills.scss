@@ -13,12 +13,39 @@
         border-radius: 25px;
         text-transform: capitalize;
         letter-spacing: 1px;
-        @include skill(#ddd , transparent);
-        transition: background-color .3s ease-in-out,color .3s ease-in-out;;
+        @extend %popularTras;
 
         &:hover{
             background-color: rgba(255,255,255,.2);
             color: #fff;
+
+            background-color:#ccc;
+            color: #000;
+        }
+    }
+}
+
+.app.light{
+    .home__skills{
+        .home-skill{
+            color: #000;
+            background: var(--projectBg-color) !important;
+            border: 1px solid #ddd;
+            &:hover{
+                background: rgba(0,0,0,.3) !important;
+                color: #fff;
+            }
+        }
+    }
+}
+.app.dark{
+    .home__skills{
+        .home-skill{
+            @include skill(#ddd , transparent);
+            &:hover{
+                background-color: rgba(255,255,255,.2);
+                color: #fff;
+            }
         }
     }
 }

@@ -2,12 +2,13 @@
 .home__top{
     height:450px;
     margin: 2rem auto;
-    border: 2px solid #777;
+    border: 2px solid var(--light-Border);
     padding: 1rem;
     display: flex;
     align-items:center;
     gap: 1rem;
     border-radius: 1rem;
+    
 
     .home__img{
         height:415px;
@@ -23,7 +24,6 @@
     .home__job{
         max-width: 390px;
         color: var(--mainSpecial-color);
-       // color: #fff;
         font-size: 5rem;
         font-weight: 400;
         font-family: "Jersey 25", sans-serif;
@@ -57,7 +57,7 @@
             content: '';
             width: 3px;
             height: 6px;
-            background: #fff;
+            background: var(--mainTxt-color);
             left: -12px;
             top: -5px;
             z-index: 0;

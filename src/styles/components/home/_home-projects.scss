@@ -47,6 +47,9 @@
         article{
             max-width: 350px;
             flex: 1;
+            background:#ccc;
+            background: var( --projectBg-color);
+            border: 1px solid #9999;
         }
 
         @include min-width(1200px){
@@ -64,12 +67,11 @@
 
         a{
             padding: .5rem 1rem;
-            border: 1px solid #777;
             font-size: 1.5rem;
             border-radius: .5rem;
-            background-color:var(--secondaryBg-color);
-            border: 1px solid #fff;
+            background-color: var(--algorithmBg-color);
             outline: none;
+            border: 1px solid rgba(153, 153, 153, 0.6);
         }
     }
 }

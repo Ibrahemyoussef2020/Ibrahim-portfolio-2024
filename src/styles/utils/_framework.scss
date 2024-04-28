@@ -3,7 +3,7 @@
 
 :root .app{
     --mainSpecial-color:#fd2b6a;
-    --subSpecial-color:darkcyan;
+    --subSpecial-l-color:darkcyan;
     --subSpecial-color:#5799ef;
 
     --Jersey-font:"Jersey 25", sans-serif;
@@ -21,18 +21,26 @@
 
 :root .app.dark{
     --bright-color:#000;
-    --mainBg-color:#282828;
+    --mainBg-color:#4a402e;
     --secondaryBg-color:#333;
-    --subBg-color:#484848; 
+    --projectBg-color:#4a402e;
+    --algorithmBg-color:rgba(0, 0, 0, 0.3);
+    --subBg-color:#837979; 
     --mainTxt-color:#fefefe;
+    --light-Border:#777;
+    --medium-Border:#333;
 }
 
 :root .app.light{
     --bright-color:#fff;
     --mainBg-color:#eee;
     --secondaryBg-color:#ddd;
+    --projectBg-color:#ccc;
+    --algorithmBg-color:#ccc;
     --subBg-color:#ccc;
     --mainTxt-color:#1c1c1c;
+    --light-Border:#ccc;
+    --medium-Border:#777;
 }
 
 
@@ -137,112 +145,9 @@ ul{
     background-color: var(--subSpecial-color);
 }
 
-/*
 
-body{
-    position: relative;
-    background: rgb(31, 31, 31);
-}
-
-body:after{
-    content:'';
-    z-index: 2;
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(50px) saturate(100%);
-    transform: translate3d(0px, 0px, 0px);
-    will-change: transform;
-}
-
-.app{
-    position: relative;
-    background: linear-gradient(90deg, 
-    rgb(31,31,31),20%,
-     rgba(31,31,31, 0.6),80%,
-      rgb(31,31,31)
-     );
-     backdrop-filter: blur(50px) saturate(100%);
-}
-
-.app:before{
-    content:'';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background: linear-gradient(180deg, rgba(31,31,31, 0), rgb(31,31,31));
-    background: #0000000c;
-    opacity: .2;
-    background:#6f4d36;
-    background: linear-gradient(180deg, #6f4d36, rgb(31,31,31));
+.page {
+   background: var(--mainBg-color); 
 
 }
-
-.page{
-    position: relative;
-    background: linear-gradient(90deg, 
-    rgb(31,31,31),20%,
-     rgba(31,31,31, 0.6),80%,
-      rgb(31,31,31)
-     );
-     backdrop-filter: blur(50px) saturate(100%);
-     background: transparent;
-}
-
-.page:after{
-    content:'';
-    z-index: -1;
-    position: absolute;
-    display: block;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(50px) saturate(100%);
-    transform: translate3d(0px, 0px, 0px);
-    will-change: transform;
-}
-
-*/
-
-
-.app{
-    position: relative;
-    background: linear-gradient(90deg, rgb(var(--ipt-baseAlt-shade1-rgb, 31,31,31)), 20%, rgba(var(--ipt-baseAlt-shade1-rgb, 31,31,31), .4), 90%, rgb(var(--ipt-baseAlt-shade1-rgb, 31,11,31)));
-}
-
-.app::before{
-    position: absolute;
-    pointer-events: none;
-    bottom: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    content: "";
-    background: linear-gradient(90deg, rgba(var(--ipt-baseAlt-shade1-rgb, 31,31,31), .2), rgb(var(--ipt-baseAlt-shade1-rgb, 31,31,31)));
-}
-
-.page,header{
-    position: relative;
-    background-color: rgba(0,0,0,.2) !important;
-}
-
-.page::before , header::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom:0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-   background: rgba(160, 114, 4, .5);
-  opacity: .5;
-}
-
-
-header{
-    box-shadow: unset !important;
-}
-
+   
