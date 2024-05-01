@@ -1,0 +1,28 @@
+.main-footer{
+    padding: 2rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;;
+
+    a{
+        display: flex;
+        @include center-circle(100px);
+        border:1px solid var(--light-Border);
+        background-color: rgba($color: #000000, $alpha: 0.1);
+        font-size: 3rem;
+        @extend %popularTras;
+
+        &:hover{
+            background-color: rgba($color: #000000, $alpha: 0.3);
+        }
+    }
+}
+
+.light .home__contact a{
+    color: #fefefe;
+    background-color: #222;
+
+    &:hover{
+        background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+}

@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
+import { homeProjectsData } from '../data/progectsData';
+import {Footer, Project, ProjectsWrapper} from '../components';
 
 const Home = () => {
   const [projectFilter,setProjectFilter] = useState('all');
+
 
   return (
     <main className='home'>
@@ -24,7 +27,6 @@ const Home = () => {
                 I'm starving to build amazing and beautiful web applications with a clean code via using solid principles and design pattern and most of clean code's roles
                 </p>
             </div>
-            
         </section>
 
         <section className='home__skills'>
@@ -63,236 +65,48 @@ const Home = () => {
             </span>
         </section>
 
+        <div className="more-items about">
+                <a href="/about">More About</a>
+                <a className='cv' download href='cv/Ibrahim Youssef.pdf'>
+                    Download CV
+                </a>
+        </div>
+
         <hr  className='main-hr'/>
 
-        <section className='home__projects'>
-            <div className="header center-between">
-                <h2 className="left">My Projects</h2>
-                
-                <div className='filters'>
-                    <button className={projectFilter === 'all' ? 'selected' : ''} onClick={_=>setProjectFilter('all')}>All</button>
-                    <button className={projectFilter === 'next' ? 'selected' : ''} onClick={_=>setProjectFilter('next')}>Next</button>
-                    <button className={projectFilter === 'react' ? 'selected' : ''} onClick={_=>setProjectFilter('react')}>React</button>
-                    <button className={projectFilter === 'html' ? 'selected' : ''} onClick={_=>setProjectFilter('html')}>Html</button>
-                </div>
-
-            </div>
-
-            <div className="projects">
-                <article className='project'>
-                    <a target='_blank' href="google.com">
-                    <div className="project__hero">
-                        <div className="images">
-                            <div className="back">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div>
-                            <div className="front">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div> 
-                        </div>                    
-                    </div>
-                    </a>
-
-                    <div className="project__info center-between">
-                        <h3>Amazon clone</h3>
-                        <p>02-04-2024</p>
-                    </div>
-
-                    <div className="project__footer center-between">
-                        <div className="skills">
-                            <span className='spa-skill'>next</span>
-                            <span className='type-skill'>react</span>
-                            <span className='style-skill'>sass</span>
-                            <span className='store-skill'>redux</span>  
-                        </div>
-                        <div className="more">
-                            <button className="more__list" onClick={_=> console.log('clickable')}>
-                                <i className="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                            <div className='more__options'>
-                                    <a href='#'>
-                                        preview
-                                    </a>
-                                    <a href='#'>
-                                        code
-                                    </a>
-                            </div>
-                        </div>                   
-                    </div>
-
-                </article>
-                <article className='project'>
-                    <a target='_blank' href="google.com">
-                    <div className="project__hero">
-                        <div className="images">
-                            <div className="back">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div>
-                            <div className="front">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div> 
-                        </div>                    
-                    </div>
-                    </a>
-
-                    <div className="project__info center-between">
-                        <h3>Amazon clone</h3>
-                        <p>02-04-2024</p>
-                    </div>
-
-                    <div className="project__footer center-between">
-                        <div className="skills">
-                            <span className='spa-skill'>next</span>
-                            <span className='type-skill'>react</span>
-                            <span className='style-skill'>sass</span>
-                            <span className='store-skill'>redux</span>  
-                        </div>
-                        <div className="more">
-                            <button className="more__list" onClick={_=> console.log('clickable')}>
-                                <i className="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                            <div className='more__options'>
-                                    <a href='#'>
-                                        preview
-                                    </a>
-                                    <a href='#'>
-                                        code
-                                    </a>
-                            </div>
-                        </div>                   
-                    </div>
-
-                </article>
-                <article className='project'>
-                    <a target='_blank' href="google.com">
-                    <div className="project__hero">
-                        <div className="images">
-                            <div className="back">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div>
-                            <div className="front">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div> 
-                        </div>                    
-                    </div>
-                    </a>
-
-                    <div className="project__info center-between">
-                        <h3>Amazon clone</h3>
-                        <p>02-04-2024</p>
-                    </div>
-
-                    <div className="project__footer center-between">
-                        <div className="skills">
-                            <span className='spa-skill'>next</span>
-                            <span className='type-skill'>react</span>
-                            <span className='style-skill'>sass</span>
-                            <span className='store-skill'>redux</span>  
-                        </div>
-                        <div className="more">
-                            <button className="more__list" onClick={_=> console.log('clickable')}>
-                                <i className="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                            <div className='more__options'>
-                                    <a href='#'>
-                                        preview
-                                    </a>
-                                    <a href='#'>
-                                        code
-                                    </a>
-                            </div>
-                        </div>                   
-                    </div>
-
-                </article>
-                <article className='project'>
-                    <a target='_blank' href="google.com">
-                    <div className="project__hero">
-                        <div className="images">
-                            <div className="back">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div>
-                            <div className="front">
-                                <img src="images/projects/amazon-clone-back.webp" alt="" />
-                            </div> 
-                        </div>                    
-                    </div>
-                    </a>
-
-                    <div className="project__info center-between">
-                        <h3>Amazon clone</h3>
-                        <p>02-04-2024</p>
-                    </div>
-
-                    <div className="project__footer center-between">
-                        <div className="skills">
-                            <span className='spa-skill'>next</span>
-                            <span className='type-skill'>react</span>
-                            <span className='style-skill'>sass</span>
-                            <span className='store-skill'>redux</span>  
-                        </div>
-                        <div className="more">
-                            <button className="more__list" onClick={_=> console.log('clickable')}>
-                                <i className="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                            <div className='more__options'>
-                                    <a href='#'>
-                                        preview
-                                    </a>
-                                    <a href='#'>
-                                        code
-                                    </a>
-                            </div>
-                        </div>                   
-                    </div>
-
-                </article>
-            </div>
-
-            <div className="more-items">
-                <a href="/projects">More Projects</a>
-            </div>
-
-        </section>
+        <ProjectsWrapper place='home' />
 
         <section className='home__algorithm'>
             <div className="header center-between">
-                <h2>Algorithm</h2>
+                <h2>Certifications</h2>
                 <div>
                     <a href="/">More details</a>
                 </div>
             </div>
             <div className="solutions">
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
-            <a href="#">prpblem solv 1</a>
+                <h3>A - Codewars</h3>
+                <a  target='_blank' rel="noopener"  href="https://www.codewars.com/users/%20Ibrahemyoussef2020%20"> 
+                    1 -Javascript Problem solving <span>(kyu 4)</span>
+                </a>
+                <h3>B - JsCodebox</h3>
+                <a  target='_blank' rel="noopener"  href="https://jscodebox.com/profile/Ibrahim_Youssef">
+                    1 -Javascript data stracture <span>(Level 1)</span>
+                </a>
+                <h3>C - FreeCodeCamp</h3>
+                <a  target='_blank' rel="noopener"  href="https://www.freecodecamp.org/certification/fccfcfd30b0-5336-47c8-9234-85c5bbd517ce/javascript-algorithms-and-data-structures">
+                    1 - Data strcture and Algorithm <span>(compelated)</span>
+                </a>
+                <a  target='_blank' rel="noopener"  href="https://www.freecodecamp.org/certification/fccfcfd30b0-5336-47c8-9234-85c5bbd517ce/responsive-web-design">
+                    2 - Responsive web design <span>(compelated)</span>
+                </a>
             </div>
         </section>
 
-        <section className='home__contact'>
-        <a target="_blank" href="https://github.com/Ibrahemyoussef2020">
-            <i className="fa-brands fa-github"></i>
-        </a>
-        <a target="_blank" href="tel:01147359396">
-            <i className="fa-brands fa-github"></i>
-        </a>
-        <a target="_blank" href="https://github.com/Ibrahemyoussef2020">
-            <i className="fa-brands fa-github"></i>
-        </a>
-        </section>
+        <div className="more-items challenges">
+                <a href="/projects">More Projects</a>
+        </div>
+
+        <Footer />
 
       </div>
     </main>

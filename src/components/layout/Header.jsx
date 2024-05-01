@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import {ModeContext} from '../App'
+import {ModeContext} from '../../App'
 
 const Header = ({isVisibleNav,setIsVisibleNav}) => {
 
@@ -27,7 +27,7 @@ const Header = ({isVisibleNav,setIsVisibleNav}) => {
                 </button>
             </div>
             <div className="right center-between">
-              <a target='_blank' href='https://github.com/Ibrahemyoussef2020' className='header__github'>
+              <a target='_blank' rel="noopener"  href='https://github.com/Ibrahemyoussef2020' className='header__github'>
                <i className="fa-brands fa-github"></i>
               </a>
               <button className='toggle-routes' onClick={_=>setIsVisibleNav(!isVisibleNav)}>

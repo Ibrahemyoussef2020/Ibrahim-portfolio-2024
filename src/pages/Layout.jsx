@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import  Header  from '../components/Header'
 import { Outlet } from 'react-router'
-import Nanigator from '../components/Nanigator'
+import {Nanigator , Header} from '../components'
 
 const Layout = () => {
   const [isVisibleNav , setIsVisibleNav] = useState(false);

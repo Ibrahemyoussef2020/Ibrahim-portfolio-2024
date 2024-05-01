@@ -2,16 +2,24 @@
 .home__top{
     height:450px;
     margin: 2rem auto;
-    border: 2px solid var(--light-Border);
     padding: 1rem;
     display: flex;
     align-items:center;
     gap: 1rem;
-    border-radius: 1rem;
+    border-bottom: 2px solid var(--light-Border);
+
+    @include min-width(760px){
+        border: 2px solid var(--light-Border);
+        border-radius: 1rem;
+    }
     
 
     .home__img{
         height:415px;
+
+        @include min-max-width(0,760px){
+            display: none;
+        }
     }
     img{
         max-width: 100%;
@@ -37,6 +45,10 @@
             color: var(--subSpecial-color);
             line-height: 30px;
             white-space: nowrap;
+
+            @include min-max-width(0,760px){
+                font-size: 1.3rem;
+            }
         }
     }
 
@@ -109,3 +121,4 @@
         opacity: 0;
     }
 }
+

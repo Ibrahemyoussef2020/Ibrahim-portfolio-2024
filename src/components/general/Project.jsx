@@ -1,10 +1,13 @@
 import React from 'react'
 
-const Project = ({props}) => {
+const Project = (props) => {
 
     const {
         color,
         title,
+        date,
+        web,
+        structure,
         code,
         preview,
         skills,
@@ -12,40 +15,41 @@ const Project = ({props}) => {
 
   return (
     <article className='project'>
-        <a target='_blank' href={preview}>
-        <div className="project__hero">
+        <a target='_blank' rel="noopener"  href={preview}>
+        <div className="project__hero" style={{backgroundColor:color}}>
             <div className="images">
                 <div className="back">
-                    <img src={`images/projects/${title}-back.webp`} alt="" />
+                    <img src={`images/projects/webp/${title}-back.webp`} alt="" />
                 </div>
                 <div className="front">
-                    <img src={`images/projects/${title}-front.webp`} alt="" />
+                    <img src={`images/projects/webp/${title}-front.webp`} alt="" />
                 </div> 
             </div>                    
         </div>
         </a>
 
         <div className="project__info center-between">
-            <h3>Amazon clone</h3>
-            <p>02-04-2024</p>
+            <h3>{title}</h3>
+            <p>{date}</p>
         </div>
 
         <div className="project__footer center-between">
             <div className="skills">
-                <span className='spa-skill'>next</span>
-                <span className='type-skill'>react</span>
-                <span className='style-skill'>sass</span>
-                <span className='store-skill'>redux</span>  
+                {
+                    skills?.map((skill,index) => (
+                        <span key={index} className={`${skill.type}-skill`}>{skill.title}</span>
+                    ))
+                }
             </div>
             <div className="more">
                 <button className="more__list" onClick={_=> console.log('clickable')}>
                     <i className="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <div className='more__options'>
-                        <a href='#'>
+                        <a target='_blank' rel="noopener"  href={preview}>
                             preview
                         </a>
-                        <a href='#'>
+                        <a target='_blank' rel="noopener"  href={code}>
                             code
                         </a>
                 </div>
@@ -55,4 +59,4 @@ const Project = ({props}) => {
   )
 }
 
-export default project
+export default Project

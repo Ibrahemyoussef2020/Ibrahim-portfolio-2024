@@ -12,7 +12,7 @@ const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
           <div className="navigator__wrapper">
             <ul>
               <li className='active'>
-                <Link onClick={_=>setIsVisibleNav(false)} to='/'>home</Link>
+                <Link onClick={_=>setIsVisibleNav(false)} to='/projects'>Projects</Link>
               </li>
               <li>
                 <Link onClick={_=>setIsVisibleNav(false)} to='/about'>about</Link>
@@ -25,13 +25,13 @@ const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
               </li>
             </ul>
             <article className='navigator__socials'>
-              <a target='_blank' href='https://web.facebook.com/facebook.comibrahimyoussef.saleh/'>
+              <a target='_blank' rel="noopener"  href='https://web.facebook.com/facebook.comibrahimyoussef.saleh/'>
                 <i className="fa-brands fa-facebook-f"></i>
               </a>
-              <a target='_blank' href='https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/'>
+              <a target='_blank' rel="noopener"  href='https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/'>
                 <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a target='_blank' href='https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/'>
+              <a target='_blank' rel="noopener"  href='https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/'>
                 <i className="fa-regular fa-envelope"></i>
               </a>
             </article>

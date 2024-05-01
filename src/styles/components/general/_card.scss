@@ -1,9 +1,13 @@
 .project {
-    max-width: 375px;
-    padding: 15px;
-    background-color: var(--secondaryBg-color);
-    border-radius: 1rem;
-    border: 1px solid #777;
+        padding: 10px;
+        border-radius: .5rem;
+        max-width:300px;
+        min-width: 280px;
+        flex: 1;
+        background:#ccc;
+        background: var( --projectBg-color);
+        border: 1px solid #9999;
+        
 
     .project__hero{
         padding: 25px 25px 0;
@@ -21,31 +25,34 @@
             display: flex;
             justify-content: flex-end;
 
+          
+
             .front{
                 position: relative;
-                width: 178px;
-                min-width: 178px;
-                height: 228px;
+                width: 148px;
+                min-width: 148px;
+                height: 180px;
                 border-radius: 12px  12px 0  0;
                 overflow: hidden;
                 z-index: 1;
-                border: 1px solid #fff;
                 border-bottom: 0;
+                background: mediumpurple;
+                border: 1px solid #777;
             }
     
             .back{
                 position: absolute;
                 bottom: 0;
                 left: 0;
-                width: 144px;
-                min-width: 144px;
-                height: 186px;
-                min-height: 186px;
+                max-width:240px;
+                height: 140px;
+                min-height: 140px;
                 border-radius: 12px  12px 0  0;
                 overflow: hidden;
                 z-index: 1;
-                border: 1px solid #fff;
                 border-bottom: 0;
+                background: darkcyan;
+                border: 1px solid #777;
             }
 
             img {
@@ -58,22 +65,43 @@
 
     .project__info{
         padding: 10px 5px;
+
+        h3{
+            font-size: 1.1rem;
+            font-weight: 500;
+            
+        }
     }
 
     .project__footer{
         padding: 10px 0 5px 0;
         .skills{
             display: flex;
-            gap: .5rem;
+            gap:.5rem;
     
             span{
+                position: relative;
                 min-width: 53px;
                 padding: 2px 7px;
                 border-radius:10px;
-                font-size: 1.1rem;
+                font-size:15px;
                 font-weight: 700;
                 text-align: center;
                 background:darkcyan;
+                z-index: 1;
+                cursor: pointer;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color:var(--projectSkillBg-color);
+                    border-radius: inherit;
+                    z-index: -1;
+                }
 
                 &.spa-skill{
                     border: 1px solid #2EDA7D;
@@ -84,7 +112,7 @@
                 &.type-skill{
                     border: 1px solid #f9990a;
                     color: #f9990a;
-                    background-color:#e1a54b30;
+                    background-color:rgb(225 165 75 / 9%);
                 }
 
                 &.style-skill{
@@ -97,6 +125,12 @@
                     border: 1px solid #0db5b5;
                     color: #0db5b5;
                     background:#008b8b0a;
+                }
+
+                &.structure-skill{
+                    border: 1px solid #fd2b6a;
+                    color: #fd2b6a;
+                    background:rgb(253 43 106 / 17%);
                 }
             }
         }
