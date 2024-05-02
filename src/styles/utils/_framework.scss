@@ -4,7 +4,7 @@
 :root .app{
     --mainSpecial-color:#fd2b6a;
     --subSpecial-l-color:darkcyan;
-    --subSpecial-color:#5799ef;
+    --subSpecial-color:#25aff3;
 
     --Jersey-font:"Jersey 25", sans-serif;
     --popp-font:"Poppins", sans-serif;
@@ -34,10 +34,10 @@
 
 :root .app.light{
     --bright-color:#fff;
-    --mainBg-color:#5799ef0f;
+    --mainBg-color:#eee;
     --secondaryBg-color:#ddd;
-    --projectBg-color:var(--subSpecial-color);
-    --algorithmBg-color:#2196f3cc;
+    --projectBg-color:#333;
+    --algorithmBg-color:#333;
     --subBg-color:#ccc;
     --mainTxt-color:#1c1c1c;
     --light-Border:#ccc;

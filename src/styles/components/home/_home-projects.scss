@@ -46,6 +46,15 @@
         gap: 1rem;
         justify-content: center;
         flex-wrap: wrap;
+
+        @include min-max-width(0,760px){
+            & .project:last-of-type{
+                display: none !important;
+            }
+            & .project:nth-last-of-type(2){
+                display: none !important;
+            }
+        }
     }
 }
 

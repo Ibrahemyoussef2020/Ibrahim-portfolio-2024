@@ -338,20 +338,6 @@ export const projectsData =[
 
 export const homeProjectsData = [
     {
-        color:'#c0cddd',
-        title:'3idak',
-        web:'site',
-        date:'17-04-2023',
-        structure:'html',
-        skills:[
-            {title:'Html', type:'structure'},
-            {title:'css',type:'style'},
-            {title:'javascript',type:'type'}
-        ],
-        preview:'https://ibrahemyoussef2020.github.io/3idak/',
-        code:'https://github.com/Ibrahemyoussef2020/3idak',
-    },
-    {
         color:'#4d74ff',
         title:'brand ecommerce',
         web:'site',
@@ -364,6 +350,20 @@ export const homeProjectsData = [
         ],
         preview:'https://brand-ecommerce-alpha.vercel.app/',
         code:'https://github.com/Ibrahemyoussef2020/Brand-ecommerce',
+    },
+    {
+        color:'#c0cddd',
+        title:'3idak',
+        web:'site',
+        date:'17-04-2023',
+        structure:'html',
+        skills:[
+            {title:'Html', type:'structure'},
+            {title:'css',type:'style'},
+            {title:'javascript',type:'type'}
+        ],
+        preview:'https://ibrahemyoussef2020.github.io/3idak/',
+        code:'https://github.com/Ibrahemyoussef2020/3idak',
     },
     {
         color:'#1a136385',
@@ -392,5 +392,31 @@ export const homeProjectsData = [
         ],
         preview:'https://amazon-clone-frontend-frw6.onrender.com/',
         code:'https://github.com/Ibrahemyoussef2020/amazon-clone-frontend',
+    },
+    {
+        color:'#7754f6',
+        title:'kidsPlay',
+        web:'site',
+        date:'13-04-2023',
+        structure:'html',
+        skills:[
+            {title:'Html', type:'structure'},
+            {title:'css',type:'style'},
+        ],
+        preview:'https://ibrahemyoussef2020.github.io/kidsPlay/',
+        code:'https://github.com/Ibrahemyoussef2020/kidsPlay',
+    },
+    {
+        color:'#f58725',
+        title:'resort',
+        web:'site',
+        date:'13-10-2023',
+        structure:'html',
+        skills:[
+            {title:'Html', type:'structure'},
+            {title:'css',type:'style'},
+        ],
+        preview:'https://ibrahemyoussef2020.github.io/Resort/',
+        code:'https://github.com/Ibrahemyoussef2020/Resort',
     },
 ]

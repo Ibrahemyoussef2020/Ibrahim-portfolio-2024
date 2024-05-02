@@ -1,7 +1,7 @@
 import React from 'react'
 import { Footer, ProjectsWrapper } from '../components'
 
-const projects = () => {
+const Projects = () => {
   return (
     <div className='main-projects'>
       <div className='container'>
@@ -12,4 +12,4 @@ const projects = () => {
   )
 }
 
-export default projects
+export default Projects

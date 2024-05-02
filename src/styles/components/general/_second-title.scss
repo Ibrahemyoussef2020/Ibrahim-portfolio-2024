@@ -1,0 +1,35 @@
+.second-title {
+    position: relative;
+    display: block;
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin: .5rem auto;
+    padding: 0 1rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+
+    &::before{
+        background: var(--subSpecial-color);
+        content: "";
+        padding: 1px;
+        position: absolute;
+        top: 50%;
+        left: -50px;
+        transform: translateY(-50%);
+        width: min(15%, 50px);
+    }
+    &::after{
+        background: var(--subSpecial-color);
+        content: "";
+        padding: 1px;
+        position: absolute;
+        top: 50%;
+        right:-50px;
+        transform: translateY(-50%);
+        width: min(15%, 50px);
+    }
+}

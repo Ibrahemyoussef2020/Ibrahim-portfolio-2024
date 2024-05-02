@@ -2,6 +2,7 @@
     max-width: 900px;
     margin: 3rem auto;
     position: relative;
+    color: #fff;
     
     @include min-width(500px){
         padding: 25px 30px;
@@ -29,7 +30,6 @@
         a{
             text-decoration: underline;
             display: none;
-            
         }
     }
 
@@ -66,9 +66,9 @@
 }
 
 .light .home__algorithm a{
-    background-color: #06528f;
+    background-color: #888;
     border: 1px solid #eee;
-    color: #FFF;
+    color: #fff;
 
     &:hover{
         background-color: #d4c7f3;
