@@ -3,7 +3,9 @@ import Footer from '../components/general/Footer'
 import { useInView } from 'react-intersection-observer';
 
 const About = () => {
-  const { ref:aboutRef, inView:isAboutVisible} = useInView(false);
+  const { ref:aboutRef, inView:isAboutVisible} = useInView({
+    triggerOnce:true
+  });
 
   return (
     <div className='about'>
