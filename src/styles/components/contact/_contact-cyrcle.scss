@@ -1,0 +1,23 @@
+.contact-circle{
+    width:70px;
+    height:70px;
+    padding:0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:2rem;
+    cursor: pointer;
+    transition: transform .5s ease-in-out;
+    border:1px solid var(--subSpecial-color);
+    box-shadow:0 0 8px 0px var(--subSpecial-color);
+    transition:.1s;
+    & > i{
+        fill:var(--subSpecial-color);
+        transform:scale(1.1,1.1)
+    } 
+    &:hover{
+        transform:perspective(500px)translate3d(-5px,-5px,50px)!important;
+        box-shadow:0 0 15px 0px var(--subSpecial-color);
+    }
+}

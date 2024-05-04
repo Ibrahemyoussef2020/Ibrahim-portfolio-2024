@@ -10,7 +10,7 @@
         @extend %abs-fullSize;
         display: flex;
         background-color:var(--secondaryBg-color);
-        z-index: 10;
+        z-index: 1000;
         transition:clip-path .7s ease-in-out;
         max-height: 600px;
     }

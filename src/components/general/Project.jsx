@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useInView } from 'react-intersection-observer';
 
 const Project = (props) => {
 
@@ -13,16 +14,19 @@ const Project = (props) => {
         skills,
     } = props
 
+    const [showOptions,setShowOptions] = useState(false);
+    const { ref:heroRef, inView:isHeroVisible} = useInView(false);  
+
   return (
-    <article className='project'>
+    <article className={`project ${showOptions ? 'show-options' : ''}`}>
         <a target='_blank' rel="noopener"  href={preview}>
-        <div className="project__hero" style={{backgroundColor:color}}>
+        <div ref={heroRef} className={`project__hero obs scalable ${isHeroVisible ? 'scale' : ''}`} style={{backgroundColor:color}}>
             <div className="images">
                 <div className="back">
-                    <img src={`images/projects/webp/${title}-back.webp`} alt="" />
+                    <img src={`images/projects/${title}-back.webp`} alt="" />
                 </div>
                 <div className="front">
-                    <img src={`images/projects/webp/${title}-front.webp`} alt="" />
+                    <img src={`images/projects/${title}-front.webp`} alt="" />
                 </div> 
             </div>                    
         </div>
@@ -42,7 +46,7 @@ const Project = (props) => {
                 }
             </div>
             <div className="more">
-                <button className="more__list" onClick={_=> console.log('clickable')}>
+                <button onClick={_=> setShowOptions(!showOptions)} className="more__list">
                     <i className="fa-solid fa-ellipsis-vertical"></i>
                 </button>
                 <div className='more__options'>

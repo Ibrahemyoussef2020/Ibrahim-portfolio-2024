@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Project from './Project';
 import { homeProjectsData, projectsData } from '../../data/progectsData';
+import { useInView } from 'react-intersection-observer';
 
 const ProjectsWrapper = ({place='projects' }) => {
     const [mainSkill,setMainSkill] = useState('all');
 
   return (
-    <section className='projects-wrapper'>
+    <section  className={`projects-wrapper`}>
       <div className="header center-between">
           <h2 className="left">My Projects</h2>
           
@@ -46,7 +47,7 @@ const ProjectsWrapper = ({place='projects' }) => {
                 date={project.date}
                 web={project.web}
                 structure={project.structure}
-                code={project.web}
+                code={project.code}
                 preview={project.preview}
                 skills={project.skills}
               />})

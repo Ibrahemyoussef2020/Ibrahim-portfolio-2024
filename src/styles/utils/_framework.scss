@@ -4,7 +4,7 @@
 :root .app{
     --mainSpecial-color:#fd2b6a;
     --subSpecial-l-color:darkcyan;
-    --subSpecial-color:#25aff3;
+    
 
     --Jersey-font:"Jersey 25", sans-serif;
     --popp-font:"Poppins", sans-serif;
@@ -30,19 +30,23 @@
     --light-Border:#777;
     --medium-Border:#333;
     --projectSkillBg-color:rgba(0,0,0,.3);
+    --subSpecial-color:#0aaeff;
+    --mainSpecial-color:#fd2b6a;
 }
 
 :root .app.light{
     --bright-color:#fff;
-    --mainBg-color:#eee;
+    --mainBg-color:#faebd7;
     --secondaryBg-color:#ddd;
-    --projectBg-color:#333;
-    --algorithmBg-color:#333;
+    --projectBg-color:#4a402e;
+    --algorithmBg-color:#4a402e;
     --subBg-color:#ccc;
-    --mainTxt-color:#1c1c1c;
+    --mainTxt-color:#000;
     --light-Border:#ccc;
     --medium-Border:#777;
     --projectSkillBg-color:rgba(0,0,0,.4);
+    --subSpecial-color:#ab00ff;
+    --mainSpecial-color:#fd2b6a;
 }
 
 
@@ -62,6 +66,7 @@ body{
     height: 100%;
     min-height: 100vh;
     background-color:var(--mainBg-color);
+    background-color: #fdd6a3;
     color: var(--mainTxt-color);
 }
 
@@ -151,4 +156,87 @@ ul{
 
 .page {
    background: var(--mainBg-color); 
+   overflow: hidden;
+}
+
+.container{
+    background: var(--mainBg-color) !important; 
+}
+
+
+.page-heading{
+    font-size: calc(2rem + 1.5vw);
+    font-weight: 900 !important;
+    margin: 2rem 0 0;
+    text-align: center;
+
+    .spiceal{
+        color: var(--subSpecial-color);
+    }
+}
+
+.page__story{
+    text-align: center;
+    line-height: 1.8;
+    margin:1rem auto;
+    max-width: 700px;
+    padding: 0 1rem;
+    a{
+        padding: 0 2px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--subSpecial-color);
+    }
+
+    span{
+        padding: 0 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color:var(--subSpecial-color);
+    }
+    
+}
+
+/* observer */
+
+.obs{
+    transition-property: transform !important;
+    transition-duration: .5s !important;
+    transition-timing-function: ease-in-out !important;
+}
+
+
+.scalable{
+    transform: scale3d(1,0,1);
+}
+
+.scale{
+    transform: scale3d(1,1,1);
+}
+
+.trans-right{
+    transform: translateX(-100%);
+}
+.trans-left{
+    transform: translateX(100%);
+}
+
+.back-to-place{
+    transform: translateX(0);
+}
+
+
+// delay
+
+.del-sm{
+    transition-delay: .1s !important;
+}
+.del-md{
+    transition-delay: .2s !important;
+}
+.del-lg{
+    transition-delay: .3s !important;
+}
+.del-hg{
+    transition-delay: .6s !important;
 }

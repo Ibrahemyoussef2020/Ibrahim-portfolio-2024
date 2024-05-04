@@ -16,6 +16,8 @@
 
     .home__img{
         height:415px;
+        position: relative;
+        z-index:5;
 
         @include min-max-width(0,760px){
             display: none;
@@ -83,9 +85,7 @@
         position: relative;
         top: -30px;
         line-height: 2;
-        color: var(--subText-color);
-        color: #5799ef;
-        color: #999;
+        opacity: .9;
         max-width: 450px;
         font-size: 1.2rem;
         font-weight: 700;

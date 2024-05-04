@@ -1,48 +1,24 @@
 .about{
-    .about-heading{
-        font-size: calc(2rem + 1.5vw);
-        font-weight: 900 !important;
-        margin: 2rem 0 1rem;
-        text-align: center;
-
-        .spiceal{
-            color: var(--subSpecial-color);
-        }
-    }
-
-    .about__story{
-        text-align: center;
-        line-height: 1.8;
-        margin:1rem auto;
-        max-width: 700px;
-        a{
-            padding: 0 2px;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--subSpecial-color);
-        }
-
-        span{
-            padding: 0 5px;
-            font-size: 1.1rem;
-            font-weight: 500;
-            color:var(--subSpecial-color);
-        }
-        
-    }
 
     .picture-info{
         margin-top: 3rem;
 
-        @include min-width(760px){
+        @include min-width(700px){
             display: flex;
             justify-content: center;
             max-height: 400px;
         }
         .picture{
+            position: relative;
             max-width:270px;
             height:300px;
             background: red;
+            z-index: 5;
+            
+
+            @include min-max-width(0,699px){
+                margin: 0 auto 2rem;
+            }
 
             img{
                 width: 100%;

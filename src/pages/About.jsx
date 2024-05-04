@@ -1,27 +1,30 @@
 import React from 'react'
 import Footer from '../components/general/Footer'
+import { useInView } from 'react-intersection-observer';
 
 const About = () => {
+  const { ref:aboutRef, inView:isAboutVisible} = useInView(false);
+
   return (
     <div className='about'>
       <div className="container">
         <div>
-          <h1 className="logo about-heading">
+          <h1 className="logo page-heading">
             ABOUT <span className="spiceal">ME</span>
           </h1>
           <p className="second-title">love  challages simple clean creative code</p>
         </div>
 
-        <p className="about__story">
+        <p className="page__story">
             I have learned some code startegy as<span>design pattern</span>, <span>solid prinsiples</span> and many roles of <span>clean code</span> and I have compeleted several projects with these roles you can look at the last projects code on my <a target='_blank' rel="noreferrer"  href='https://github.com/Ibrahemyoussef2020'>Github</a> in 2024 
         </p>
        
        
         <section className="picture-info">
-            <div className="picture">
+            <div ref={aboutRef} className={`picture obs trans-left ${isAboutVisible ? 'back-to-place' : '' }`}>
               <img src="images/ibrahem.webp" alt="" />
             </div>
-            <ul class="info">
+            <ul ref={aboutRef} className={`info obs trans-right ${isAboutVisible ? 'back-to-place' : '' }`}>
               <li>
                 <span>Name</span>  
                 <span>Ibrahim Youssef</span>
@@ -41,7 +44,7 @@ const About = () => {
               <li>
                 <span>Education</span>
                 <span>Alazher , Education , 
-                <span class="spiceal">Technology</span></span>
+                <span className="spiceal">Technology</span></span>
               </li>
               <li>
                 <span>Langages</span>
@@ -56,7 +59,7 @@ const About = () => {
         </section>
 
         <section className='about__skills'>
-          <h2 className='about-heading'>MAIN <span className="spiceal">SKILLS</span></h2>
+          <h2 className='page-heading'>MAIN <span className="spiceal">SKILLS</span></h2>
           <div className='skills'>
               <span className="html about-skill">
                   html

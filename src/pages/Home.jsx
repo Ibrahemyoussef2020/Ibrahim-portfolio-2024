@@ -1,19 +1,22 @@
 import React, { useState } from 'react'
 import { homeProjectsData } from '../data/progectsData';
 import {Footer, Project, ProjectsWrapper} from '../components';
+import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
   const [projectFilter,setProjectFilter] = useState('all');
-
+  const { ref:topRef, inView:isTopVisible} = useInView(false);
+  const { ref:algoRef, inView:isAlgoVisible} = useInView(false);    
+  const { ref:skillsRef, inView:isSkillsVisible} = useInView(false);  
 
   return (
     <main className='home'>
       <div className="container">
-        <section className='home__top'>
-            <div className="home__img">
+        <section className='home__top' ref={topRef}>
+            <div className={`home__img obs trans-left ${isTopVisible ? 'back-to-place' : '' }`}>
                 <img src="images/ibrahem.webp" alt="" />
             </div>
-            <div className="home__intro">
+            <div className={`home__intro obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
                 <h2 className='home__name'>
                 <i className="fa-solid fa-mug-saucer"></i>
                 <span>Ibrahim youssef</span>
@@ -30,37 +33,37 @@ const Home = () => {
         </section>
 
         <section className='home__skills'>
-            <span className="html home-skill">
+            <span ref={skillsRef} className={`html del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 html
             </span>
-            <span className="css home-skill">
+            <span ref={skillsRef} className={`css del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 css
             </span>
-            <span className="sass home-skill">
+            <span ref={skillsRef} className={`sass  home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 sass
             </span>
-            <span className="js home-skill">
+            <span ref={skillsRef} className={`js del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 javascript
             </span>
-            <span className="ts home-skill">
+            <span className={`ts del-small home-skill del-md  obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 typescript
             </span>
-            <span className="recat home-skill">
+            <span ref={skillsRef} className={`react  home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 recat
             </span>
-            <span className="redux home-skill">
+            <span ref={skillsRef} className={`reduv del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 redux
             </span>
-            <span className="next home-skill">
+            <span ref={skillsRef} className={`next del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 next
             </span>
-            <span className="bootstarp home-skill">
+            <span ref={skillsRef} className={`bootstrap home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                 bootstarp
             </span>
-            <span className="talwind home-skill">
+            <span ref={skillsRef} className={`talwind del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                talwind
             </span>
-            <span className="mui home-skill">
+            <span ref={skillsRef} className={`mui del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
                material Ui
             </span>
         </section>
@@ -76,7 +79,7 @@ const Home = () => {
 
         <ProjectsWrapper place='home' />
 
-        <section className='home__algorithm'>
+        <section ref={algoRef} className={`home__algorithm obs trans-left ${isAlgoVisible ? 'back-to-place' : '' }`} >
             <div className="header center-between">
                 <h2>Certifications</h2>
                 <div>

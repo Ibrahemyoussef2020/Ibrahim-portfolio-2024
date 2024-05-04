@@ -283,7 +283,7 @@ export const projectsData =[
     },
     {
         color:'#198754',
-        title:'tasty food',
+        title:'restaurant',
         web:'site',
         date:'12-03-2022',
         structure:'html',
