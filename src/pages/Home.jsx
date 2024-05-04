@@ -1,13 +1,30 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { homeProjectsData } from '../data/progectsData';
 import {Footer, Project, ProjectsWrapper} from '../components';
 import { useInView } from 'react-intersection-observer';
+import { NanigateContext } from '../App';
+import {useNavigate} from 'react-router'
 
 const Home = () => {
   const [projectFilter,setProjectFilter] = useState('all');
   const { ref:topRef, inView:isTopVisible} = useInView({triggerOnce:true});
   const { ref:algoRef, inView:isAlgoVisible} = useInView({triggerOnce:true});    
   const { ref:skillsRef, inView:isSkillsVisible} = useInView({triggerOnce:true});  
+
+  const {pageClass,setPageClass} = useContext(NanigateContext)
+
+  const navigate = useNavigate() ; 
+  
+const moveToRoutFromRouts = (e,page)=>{
+    e.preventDefault();
+
+    setPageClass('page-anim');
+    navigate(`${page}`)
+
+    setTimeout(()=>{
+        setPageClass('');
+    },1000)
+}
 
   return (
     <main className='home'>
@@ -32,47 +49,47 @@ const Home = () => {
             </div>
         </section>
 
-        <section className='home__skills'>
-            <span ref={skillsRef} className={`html del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+        <section ref={skillsRef} className={`home__skills obs scalable ${isSkillsVisible ? 'scale' : ''}`}>
+            <span  className={`html home-skill `}>
                 html
             </span>
-            <span ref={skillsRef} className={`css del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`css home-skill `}>
                 css
             </span>
-            <span ref={skillsRef} className={`sass  home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`sass  home-skill `}>
                 sass
             </span>
-            <span ref={skillsRef} className={`js del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`js home-skill `}>
                 javascript
             </span>
-            <span className={`ts del-small home-skill del-md  obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span className={`ts home-skill`}>
                 typescript
             </span>
-            <span ref={skillsRef} className={`react  home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
-                recat
+            <span  className={`react  home-skill `}>
+                react
             </span>
-            <span ref={skillsRef} className={`reduv del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`reduv home-skill `}>
                 redux
             </span>
-            <span ref={skillsRef} className={`next del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`next home-skill `}>
                 next
             </span>
-            <span ref={skillsRef} className={`bootstrap home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`bootstrap home-skill `}>
                 bootstarp
             </span>
-            <span ref={skillsRef} className={`talwind del-sm home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`talwind del-sm home-skill `}>
                talwind
             </span>
-            <span ref={skillsRef} className={`mui del-md home-skill obs trans-right ${isSkillsVisible ? 'back-to-place' : ''}`}>
+            <span  className={`mui del-md home-skill `}>
                material Ui
             </span>
         </section>
 
         <div className="more-items about">
-                <a href="/about">More About</a>
-                <a className='cv' download href='cv/Ibrahim Youssef.pdf'>
-                    Download CV
-                </a>
+            <a href="/about" onClick={e => moveToRoutFromRouts(e, 'about')}>More About</a>
+            <a className='cv' download href='cv/Ibrahim Youssef.pdf'>
+                Download CV
+            </a>
         </div>
 
         <hr  className='main-hr'/>
@@ -83,7 +100,7 @@ const Home = () => {
             <div className="header center-between">
                 <h2>Certifications</h2>
                 <div>
-                    <a href="/">More details</a>
+                    <a href="/challenges" onClick={e => moveToRoutFromRouts(e, 'challenges')}>More details</a>
                 </div>
             </div>
             <div className="solutions">
@@ -106,7 +123,7 @@ const Home = () => {
         </section>
 
         <div className="more-items challenges">
-                <a href="/projects">More Projects</a>
+                <a href='/challenges' onClick={e => moveToRoutFromRouts(e, 'challenges')}>More Challenges</a>
         </div>
 
         <Footer />

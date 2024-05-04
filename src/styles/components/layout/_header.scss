@@ -7,17 +7,32 @@ header{
     background: var(--mainBg-color);
 
      .center-between{
-        gap:2rem;
+        gap:1rem;
     }
 
     .left{
         .logo{
-            font-size: 2rem;
-            font-family: "Jersey 25", sans-serif;
+            max-width: fit-content;
             span{
-                color: var(--mainSpecial-color);
+                position: relative;
+                padding-left: 5px;
+                font-size: 1.7rem;
             }
-            
+    
+            & span::before{
+                opacity: .5;
+                position: absolute;
+                content: '';
+                width: 5px;
+                height: 10px;
+                background: var(--mainTxt-color);
+                left: 20px;
+                top: -5px;
+                z-index: 0;
+                border-radius: 0 2px 2px 0;
+    
+                animation: logo-anim 1.3s ease-in-out forwards infinite;
+            }
         }
     }
 
@@ -72,6 +87,7 @@ header{
         }
     }
 
+
 }
 
 .dark{
@@ -88,4 +104,12 @@ header{
             left:5px;
         }
     } 
+}
+
+
+@keyframes logo-anim {
+    to{
+        top: -7px;
+        opacity: 0;
+    }
 }

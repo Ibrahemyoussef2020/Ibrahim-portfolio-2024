@@ -6,12 +6,15 @@ import { Route , Routes } from "react-router";
 const storageMode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'dark';
 
 export const ModeContext = createContext();
+export const NanigateContext = createContext();
 
 function App() {
   const [mode , setMode] = useState(storageMode);
+  const [pageClass,setPageClass] = useState('');
 
   return (
     <ModeContext.Provider  value={{mode,setMode}}>
+    <NanigateContext.Provider value={{pageClass,setPageClass}}> 
     <div className={`app ${mode}`}>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -23,6 +26,7 @@ function App() {
           </Route>
         </Routes>
     </div>
+    </NanigateContext.Provider> 
     </ModeContext.Provider>
   );
 }

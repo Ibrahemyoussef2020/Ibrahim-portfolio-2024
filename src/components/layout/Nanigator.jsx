@@ -1,7 +1,26 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { NanigateContext } from '../../App';
 
 const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
+
+  const {pageClass,setPageClass} = useContext(NanigateContext)
+
+  const navigate = useNavigate() ; 
+
+  const moveToRoutFromNav = (e,page)=>{
+    e.preventDefault();
+
+    setIsVisibleNav(false);
+    setTimeout(()=>{
+        setPageClass('page-anim');
+        navigate(`${page}`)
+    },3000)
+    setTimeout(()=>{
+        setPageClass('');
+    },4000)
+}
+
   return (
     <section className={`navigator ${isVisibleNav ? 'open' : 'close'}`}>
       <div className="navigator__clip">
@@ -12,16 +31,16 @@ const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
           <div className="navigator__wrapper">
             <ul>
               <li className='active'>
-                <Link onClick={_=>setIsVisibleNav(false)} to='/projects'>Projects</Link>
+                <Link onClick={(e)=> moveToRoutFromNav(e,'projects')} to='/projects'>Projects</Link>
               </li>
               <li>
-                <Link onClick={_=>setIsVisibleNav(false)} to='/about'>about</Link>
+                <Link onClick={(e)=> moveToRoutFromNav(e,'about')} to='/about'>about</Link>
               </li>
               <li>
-                <Link onClick={_=>setIsVisibleNav(false)} to='/contact'>contact</Link>
+                <Link onClick={(e)=> moveToRoutFromNav(e,'contact')} to='/contact'>contact</Link>
               </li>
               <li>
-                <Link onClick={_=>setIsVisibleNav(false)} to='/challenges'>algorithm</Link>
+                <Link onClick={(e)=> moveToRoutFromNav(e,'challenges')} to='/challenges'>algorithm</Link>
               </li>
             </ul>
             <article className='navigator__socials'>

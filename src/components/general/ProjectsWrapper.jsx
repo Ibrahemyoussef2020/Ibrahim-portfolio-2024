@@ -1,10 +1,27 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Project from './Project';
 import { homeProjectsData, projectsData } from '../../data/progectsData';
 import { useInView } from 'react-intersection-observer';
+import { useNavigate } from 'react-router';
+import { NanigateContext } from '../../App';
 
 const ProjectsWrapper = ({place='projects' }) => {
     const [mainSkill,setMainSkill] = useState('all');
+
+    const {pageClass,setPageClass} = useContext(NanigateContext)
+
+    const navigate = useNavigate() ; 
+    
+  const moveToRoutFromRouts = (e,page)=>{
+      e.preventDefault();
+
+      setPageClass('page-anim');
+      navigate(`${page}`)
+
+      setTimeout(()=>{
+          setPageClass('');
+      },1000)
+  }
 
   return (
     <section  className={`projects-wrapper`}>
@@ -55,7 +72,7 @@ const ProjectsWrapper = ({place='projects' }) => {
       </div>
 
       {place === 'home' ? <div className="more-items projects">
-          <a href="/projects">More Projects</a>
+          <a href="/projects" onClick={e => moveToRoutFromRouts(e,'projects')}>More Projects</a>
       </div> : null}
 
     </section>

@@ -1,0 +1,29 @@
+
+.page-anim{
+    transform-origin: center right;
+    animation: navigate 1s linear;
+}
+
+@keyframes navigate {
+    0%{
+        transform: rotatey(0deg); 
+        background: var(--bg);
+    }
+    25%{
+        transform: rotatey(90deg) ;
+        background:var(--homebg);
+    }
+    50%{
+        transform: rotatey(180deg) ;
+        background:var(--homebg);
+    }
+    75%{
+        transform: rotatey(90deg) ;
+        background:var(--homebg);
+    }
+
+    100%{
+        transform: rotatey(0deg); 
+        background:var(--bg);
+    }
+}
