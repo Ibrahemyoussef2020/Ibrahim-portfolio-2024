@@ -5,6 +5,14 @@ const Header = ({isVisibleNav,setIsVisibleNav}) => {
 
   const {mode , setMode} =  useContext(ModeContext);
 
+  const toggleMode = ()=>{
+    const neMode  = mode === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('mode' , neMode);
+
+    setMode(()=> localStorage.getItem('mode'));
+    
+  }
+
   return (
     <header className='main-section'>
       <div className="container">
@@ -13,7 +21,7 @@ const Header = ({isVisibleNav,setIsVisibleNav}) => {
                 <a href="/" className="logo colors-trans">
                   I<span>br</span>ahim
                 </a>
-                <button className="mode-container" onClick={()=> setMode(mode  => mode === 'dark' ? 'light' : 'dark')}>
+                <button className="mode-container" onClick={toggleMode}>
                   <i className="fa-solid fa-sun external-icon"></i>
                   <span className="mode-wheel">
                   {

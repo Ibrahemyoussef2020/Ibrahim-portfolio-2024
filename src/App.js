@@ -3,10 +3,12 @@ import {Layout , Home ,Contact ,About ,Challenges, Projects} from "./pages";
 import { Route , Routes } from "react-router";
 
 
+const storageMode = localStorage.getItem('mode') ? localStorage.getItem('mode') : 'dark';
+
 export const ModeContext = createContext();
 
 function App() {
-  const [mode , setMode] = useState('dark');
+  const [mode , setMode] = useState(storageMode);
 
   return (
     <ModeContext.Provider  value={{mode,setMode}}>
