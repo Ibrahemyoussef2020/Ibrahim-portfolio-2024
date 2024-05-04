@@ -5,18 +5,18 @@ import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
   const [projectFilter,setProjectFilter] = useState('all');
-  const { ref:topRef, inView:isTopVisible} = useInView(false);
-  const { ref:algoRef, inView:isAlgoVisible} = useInView(false);    
-  const { ref:skillsRef, inView:isSkillsVisible} = useInView(false);  
+  const { ref:topRef, inView:isTopVisible} = useInView({triggerOnce:true});
+  const { ref:algoRef, inView:isAlgoVisible} = useInView({triggerOnce:true});    
+  const { ref:skillsRef, inView:isSkillsVisible} = useInView({triggerOnce:true});  
 
   return (
     <main className='home'>
       <div className="container">
         <section className='home__top' ref={topRef}>
-            <div className={`home__img obs trans-left ${isTopVisible ? 'back-to-place' : '' }`}>
+            <div className={`home__img obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
                 <img src="images/ibrahem.webp" alt="" />
             </div>
-            <div className={`home__intro obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
+            <div className={`home__intro obs trans-left ${isTopVisible ? 'back-to-place' : '' }`}>
                 <h2 className='home__name'>
                 <i className="fa-solid fa-mug-saucer"></i>
                 <span>Ibrahim youssef</span>

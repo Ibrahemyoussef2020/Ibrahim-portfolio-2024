@@ -15,7 +15,7 @@ const ChallengeCard = (props) => {
     } = props;
 
     const [showStory,setShowStory] = useState(false);
-    const { ref:challangesRef, inView:isChallangesVisible} = useInView(false); 
+    const { ref:challangesRef, inView:isChallangesVisible} = useInView({triggerOnce:true}); 
 
   return (
     <article className={`solution ${showStory ? 'show-story' : ''}`}>

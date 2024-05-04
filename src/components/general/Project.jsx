@@ -15,7 +15,9 @@ const Project = (props) => {
     } = props
 
     const [showOptions,setShowOptions] = useState(false);
-    const { ref:heroRef, inView:isHeroVisible} = useInView(false);  
+    const { ref:heroRef, inView:isHeroVisible} = useInView({
+        triggerOnce:true
+    });  
 
   return (
     <article className={`project ${showOptions ? 'show-options' : ''}`}>

@@ -205,6 +205,10 @@ ul{
     transition-timing-function: ease-in-out !important;
 }
 
+.fast-trans {
+    transition-duration: .2s !important;
+}
+
 
 .scalable{
     transform: scale3d(1,0,1);

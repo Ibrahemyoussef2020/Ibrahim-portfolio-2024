@@ -3,7 +3,9 @@ import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
-  const { ref:footerRef, inView:isFooterVisible} = useInView(false);
+  const { ref:footerRef, inView:isFooterVisible} = useInView({
+    triggerOnce:true
+  });
 
   return (
     <>

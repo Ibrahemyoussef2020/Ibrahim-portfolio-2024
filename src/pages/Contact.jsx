@@ -2,8 +2,11 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { contactImgList, contactTextList } from '../data/contactData';
+import { useInView } from 'react-intersection-observer';
 
 const Contact = () => {
+  const { ref:conatctIconsRef, inView:isConatctIconVisible} = useInView({triggerOnce:true}); 
+  const { ref:conatctTextRef, inView:isConatctTextVisible} = useInView({triggerOnce:true}); 
 
   const [messageInfo , setMessageInfo] = useState({
     name:'',
@@ -42,7 +45,7 @@ const Contact = () => {
       <section className='contact-ul'>
         {
           contactTextList.map(contact =>
-            <li key={contact.name}>
+            <li key={contact.name} className={`obs trans-right ${isConatctIconVisible ? 'back-to-place' : ''}`}>
               <span>{contact.name}</span>
               <span>
                 <a href={contact.sub} target='_blank'>{contact.title}</a>
@@ -53,17 +56,18 @@ const Contact = () => {
 
       <section className="bull-ul">
         {
-          contactImgList.map(contact =>
-            
-            <a
-              className="contact-circle"
+          contactImgList.map(contact =>{
+            const {toggeClass} = contact;
+            console.log(toggeClass);
+            return <a
+              className={`contact-circle obs ${contact.staticClass} ${isConatctIconVisible ? toggeClass : ''}`}
               key={contact.name} 
               target="_blank"
-
+              ref={conatctIconsRef}
               href={contact.link}>
                   {contact.icon}
             </a>
-       
+          }
         )}
       </section>
       </div>
