@@ -22,7 +22,7 @@ const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
 }
 
   return (
-    <section className={`navigator ${isVisibleNav ? 'open' : 'close'}`}>
+    <section className={`navigator`}>
       <div className="navigator__clip">
         <div className="navigator__left">
           <img src="images/nanigator-img.webp" alt="" />

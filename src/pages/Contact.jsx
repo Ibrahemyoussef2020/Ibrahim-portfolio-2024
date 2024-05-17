@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 import { contactImgList, contactTextList } from '../data/contactData';
 import { useInView } from 'react-intersection-observer';
+import { SocialBar } from '../components';
 
 const Contact = () => {
   const { ref:conatctIconsRef, inView:isConatctIconVisible} = useInView({triggerOnce:true}); 
@@ -36,80 +37,96 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1 className="logo page-heading">
-        CONTACT <span className='spiceal'> ME </span> VIA
-      </h1>
-      <p className='second-title'>I’M ALWAYS OPEN TO DISCUSSING PRODUCT DESIGN WORK OR PARTNERSHIPS</p>
-     
-     <div className="lists">
-      <section className='contact-ul'>
-        {
-          contactTextList.map(contact =>
-            <li key={contact.name} className={`obs trans-right ${isConatctIconVisible ? 'back-to-place' : ''}`}>
-              <span>{contact.name}</span>
-              <span>
-                <a href={contact.sub} target='_blank'>{contact.title}</a>
-              </span>
-            </li>
-        )}
-      </section>
+      <div className="container">
+        <h1 className="logo page-heading mb-1">
+          Get In <span className='spiceal'> Touch </span> 
+        </h1>
+        <p className='text-center'>
+          I’M ALWAYS OPEN TO DISCUSS PRODUCT DESIGN WORK OR PARTNERSHIPS
+        </p>
+      
+        <div className='contact__content center-around'>
+          
+          <div className="contact__info flex-1">
+            <h2>contact <span>information</span></h2>
+            <p>
+              You can find me via all these soical for hiring or freelancing work, or send me mail via form.
+            </p>
 
-      <section className="bull-ul">
-        {
-          contactImgList.map(contact =>{
-            const {toggeClass} = contact;
-            console.log(toggeClass);
-            return <a
-              className={`contact-circle obs ${contact.staticClass} ${isConatctIconVisible ? toggeClass : ''}`}
-              key={contact.name} 
-              target="_blank"
-              ref={conatctIconsRef}
-              href={contact.link}>
-                  {contact.icon}
-            </a>
-          }
-        )}
-      </section>
-      </div>
+            <div className='contact__list'>
+              <a target='_blank' rel="noopener" href='https://mailto:ibrahimYoussef95.12@gmail.com' className='contact-item'>
+                  <div className='flex-center'>
+                    <i className="fa-regular fa-envelope"></i>
+                  </div>
+                  <div>
+                    <h3>Email</h3>
+                    <p>ibrahimYoussef95.12@gmail</p>
+                  </div>
+              </a>
+              <a  target='_blank' rel="noopener" href='tel:01147359396' className='contact-item'>
+                  <div className='flex-center'>
+                    <i className="fa-solid fa-mobile-screen-button"></i>
+                  </div>
+                  <div>
+                    <h3>Phone</h3>
+                    <p>01147359396</p>
+                  </div>
+              </a>
+              <div className='contact-item'>
+                  <div className='flex-center'>
+                    <i className="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <h3>Residence</h3>
+                    <p>Egypt, Cairo</p>
+                  </div>
+              </div>
+            </div>
 
-    <div className="lists">
+            <h3> 
+              <i className="fa-solid fa-user"></i>
+              <span>Visit my social profiles and get contact </span>
+            </h3>
 
-      <div className="form-heading">
-        Do not hesitate to write to me via my private email for any Idea
-      </div>
+            <SocialBar />
+          
+          </div>
 
-    <section className="form-contact">    
-    <form 
-      ref={formRef} 
-      onSubmit={handleSubmitMessage}
-      action="https://formsubmit.co/https://formsubmit.co/el/kixuko"
-      method="POST"
-    >
-        
-      <div className='input-wrapper'>
-        <h3>Enter Your Name *</h3>
-        <input type="text" name='name' onChange={e => handleMessageInfoChange(e)} required/>
+          <div className="contact__form flex-1 form-contact">
+            <h2>Just message <span>me</span></h2>     
+              <form 
+                ref={formRef} 
+                onSubmit={handleSubmitMessage}
+                action="https://formsubmit.co/https://formsubmit.co/el/kixuko"
+                method="POST"
+              >
+                
+              <div className='input-wrapper'>
+                <h3>Enter Your Name *</h3>
+                <input type="text" name='name' onChange={e => handleMessageInfoChange(e)} required/>
+              </div>
+              <div className='input-wrapper'>
+                <h3>Enter Your Email *</h3>
+                <input type="text" name='email' onChange={e => handleMessageInfoChange(e)} required/>
+              </div>
+              <div className='input-wrapper'>
+                <h3>Enter Msg Title *</h3>
+                <input type="text" name='title' onChange={e => handleMessageInfoChange(e)} required/>
+              </div>
+              <div className='input-wrapper'>
+                <h3>Enter Your Phone</h3>
+                <input type="text" name='phone' onChange={e => handleMessageInfoChange(e)}/>
+              </div>
+              <textarea type="text" name='message' onChange={e => handleMessageInfoChange(e)} required>
+              </textarea>
+              <button type='submit' onClick={handleSubmitMessage}>
+                Submit
+              </button>
+            </form>
+          </div> 
+
+        </div>  
       </div>
-      <div className='input-wrapper'>
-        <h3>Enter Your Email *</h3>
-        <input type="text" name='email' onChange={e => handleMessageInfoChange(e)} required/>
-      </div>
-      <div className='input-wrapper'>
-        <h3>Enter Msg Title *</h3>
-        <input type="text" name='title' onChange={e => handleMessageInfoChange(e)} required/>
-      </div>
-      <div className='input-wrapper'>
-        <h3>Enter Your Phone</h3>
-        <input type="text" name='phone' onChange={e => handleMessageInfoChange(e)}/>
-      </div>
-      <textarea type="text" name='message' onChange={e => handleMessageInfoChange(e)} required>
-      </textarea>
-      <button type='submit' onClick={handleSubmitMessage}>
-        Submit
-      </button>
-    </form>
-    </section> 
-    </div>   
     </div>
   )
 }

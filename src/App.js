@@ -7,14 +7,17 @@ const storageMode = localStorage.getItem('mode') ? localStorage.getItem('mode') 
 
 export const ModeContext = createContext();
 export const NanigateContext = createContext();
+export const NavigatorContext = createContext();
 
 function App() {
   const [mode , setMode] = useState(storageMode);
   const [pageClass,setPageClass] = useState('');
+  const [isVisibleNav , setIsVisibleNav] = useState(false);
 
   return (
     <ModeContext.Provider  value={{mode,setMode}}>
-    <NanigateContext.Provider value={{pageClass,setPageClass}}> 
+    <NanigateContext.Provider value={{pageClass,setPageClass}}>
+    <NavigatorContext.Provider value={{isVisibleNav , setIsVisibleNav}}>
     <div className={`app ${mode}`}>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -26,6 +29,7 @@ function App() {
           </Route>
         </Routes>
     </div>
+    </NavigatorContext.Provider>
     </NanigateContext.Provider> 
     </ModeContext.Provider>
   );

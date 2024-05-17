@@ -1,19 +1,19 @@
 import React, { useContext, useState } from 'react'
 import { homeProjectsData } from '../data/progectsData';
-import {Footer, Project, ProjectsWrapper} from '../components';
+import {Footer, HomeIntro, NextSection, Project, ProjectsWrapper, Skills} from '../components';
 import { useInView } from 'react-intersection-observer';
 import { NanigateContext } from '../App';
 import {useNavigate} from 'react-router'
+import ChallengesWrapper from '../components/general/ChallengesWrapper';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [projectFilter,setProjectFilter] = useState('all');
-  const { ref:topRef, inView:isTopVisible} = useInView({triggerOnce:true});
   const { ref:algoRef, inView:isAlgoVisible} = useInView({triggerOnce:true});    
-  const { ref:skillsRef, inView:isSkillsVisible} = useInView({triggerOnce:true});  
 
   const {pageClass,setPageClass} = useContext(NanigateContext)
 
-  const navigate = useNavigate() ; 
+const navigate = useNavigate() ; 
   
 const moveToRoutFromRouts = (e,page)=>{
     e.preventDefault();
@@ -29,75 +29,53 @@ const moveToRoutFromRouts = (e,page)=>{
   return (
     <main className='home'>
       <div className="container">
-        <section className='home__top' ref={topRef}>
-            <div className={`home__img obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
-                <img src="images/ibrahem.webp" alt="" />
-            </div>
-            <div className={`home__intro obs trans-left ${isTopVisible ? 'back-to-place' : '' }`}>
-                <h2 className='home__name'>
-                <i className="fa-solid fa-mug-saucer"></i>
-                <span>Ibrahim youssef</span>
-                </h2>
-                <h1 className="home__job">
-                Frontend developer
-                <br/>
-                <span>( React / Next ... developer )</span>
-                </h1>
-                <p className='home-__desc'>
-                I'm starving to build amazing and beautiful web applications with a clean code via using solid principles and design pattern and most of clean code's roles
-                </p>
-            </div>
+
+        <HomeIntro />
+        
+
+        <section id='home__skills' className='home__skills'>
+            <Skills page='home'/>
         </section>
 
-        <section ref={skillsRef} className={`home__skills obs scalable ${isSkillsVisible ? 'scale' : ''}`}>
-            <span  className={`html home-skill `}>
-                html
-            </span>
-            <span  className={`css home-skill `}>
-                css
-            </span>
-            <span  className={`sass  home-skill `}>
-                sass
-            </span>
-            <span  className={`js home-skill `}>
-                javascript
-            </span>
-            <span className={`ts home-skill`}>
-                typescript
-            </span>
-            <span  className={`react  home-skill `}>
-                react
-            </span>
-            <span  className={`reduv home-skill `}>
-                redux
-            </span>
-            <span  className={`next home-skill `}>
-                next
-            </span>
-            <span  className={`bootstrap home-skill `}>
-                bootstarp
-            </span>
-            <span  className={`talwind del-sm home-skill `}>
-               talwind
-            </span>
-            <span  className={`mui del-md home-skill `}>
-               material Ui
-            </span>
+
+      
+      <hr id='home__projects' className='main-hr' />
+
+        <ProjectsWrapper place='home'/>
+
+
+        <hr className='main-hr' />
+
+        
+        <section className="home__challenges" id='home__challenges'>
+
+          <div className="solutions__header">
+            <h2 className='home-solutions__title text-center'>My <span className='spec'>Challenges</span></h2>
+            <p className='home-solutions__desc second-title'>
+              There are some of my code challenges like probelm solving sites and algorithm certifications and some other code challenges.
+            </p>
+          </div>
+          <div className='another-solutions flex-center'>
+            <a className='code' href="/"><span>CodeChalle</span></a>
+            <a className='linkidin' href="/"><span>Linkidin</span></a>
+          </div>
+          <ChallengesWrapper page='home' />
+          <div className="btns flex-center more-items">
+            <Link to='/challenges' className="main-btn" onClick={e => moveToRoutFromRouts(e, 'challenges')}>
+              <span>More Challenges</span> <i className="fa-solid fa-angles-right"></i>
+            </Link>
+          </div>
         </section>
+      </div>
+    </main>
+  )
+}
 
-        <div className="more-items about">
-            <a href="/about" onClick={e => moveToRoutFromRouts(e, 'about')}>More About</a>
-            <a className='cv' download href='cv/Ibrahim Youssef.pdf'>
-                Download CV
-            </a>
-        </div>
+export default Home
 
-        <hr  className='main-hr'/>
 
-        <ProjectsWrapper place='home' />
-
-        <section ref={algoRef} className={`home__algorithm obs trans-left ${isAlgoVisible ? 'back-to-place' : '' }`} >
-            <div className="header center-between">
+/*
+<div className="header center-between">
                 <h2>Certifications</h2>
                 <div>
                     <a href="/challenges" onClick={e => moveToRoutFromRouts(e, 'challenges')}>More details</a>
@@ -120,17 +98,5 @@ const moveToRoutFromRouts = (e,page)=>{
                     2 - Responsive web design <span>(compelated)</span>
                 </a>
             </div>
-        </section>
 
-        <div className="more-items challenges">
-                <a href='/challenges' onClick={e => moveToRoutFromRouts(e, 'challenges')}>More Challenges</a>
-        </div>
-
-        <Footer />
-
-      </div>
-    </main>
-  )
-}
-
-export default Home
+*/

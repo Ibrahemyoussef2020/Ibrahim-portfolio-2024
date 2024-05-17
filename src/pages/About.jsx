@@ -1,15 +1,33 @@
 import React from 'react'
-import Footer from '../components/general/Footer'
+import Footer from '../components/layout/Footer'
 import { useInView } from 'react-intersection-observer';
+import {AboutInfo, Skills} from '../components';
 
 const About = () => {
-  const { ref:aboutRef, inView:isAboutVisible} = useInView({
-    triggerOnce:true
-  });
+  const { ref:aboutRef, inView:isAboutVisible} = useInView({triggerOnce:true});
 
   return (
     <div className='about'>
-      <div className="container">
+         <AboutInfo /> 
+
+         <section className='about__skills' id='about__skills'>
+          <h2 className='page-heading'>MAIN <span className="spiceal">SKILLS</span></h2>
+          <p className='page__story second-title'>
+            Thery are the most important skills I have lerned and some other skills depend on these some.
+          </p>
+          <Skills page='about'/>
+        </section>
+
+    </div>
+  )
+}
+
+export default About
+
+/*
+
+
+<div className="container">
         <div>
           <h1 className="logo page-heading">
             ABOUT <span className="spiceal">ME</span>
@@ -62,47 +80,9 @@ const About = () => {
 
         <section className='about__skills'>
           <h2 className='page-heading'>MAIN <span className="spiceal">SKILLS</span></h2>
-          <div className='skills'>
-              <span className="html about-skill">
-                  html
-              </span>
-              <span className="css about-skill">
-                  css
-              </span>
-              <span className="sass about-skill">
-                  sass
-              </span>
-              <span className="js about-skill">
-                  javascript
-              </span>
-              <span className="ts about-skill">
-                  typescript
-              </span>
-              <span className="recat about-skill">
-                  recat
-              </span>
-              <span className="redux about-skill">
-                  redux
-              </span>
-              <span className="next about-skill">
-                  next
-              </span>
-              <span className="bootstarp about-skill">
-                  bootstarp
-              </span>
-              <span className="talwind about-skill">
-                talwind
-              </span>
-              <span className="mui about-skill">
-                material Ui
-              </span>
-          </div>
+          <Skills page='about'/>
         </section>
+      </div>  
 
-        <Footer />
-      </div>        
-    </div>
-  )
-}
 
-export default About
+*/

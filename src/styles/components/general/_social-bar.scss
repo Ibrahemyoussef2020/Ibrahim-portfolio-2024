@@ -1,0 +1,32 @@
+.social-bar{
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    a{
+        font-size: 1.5rem;
+        height: 35px;
+        width: 35px;
+        background-color: red;
+        border-radius: 5px;
+        @extend %flex-center;
+        transition: transform .2s ease-in-out;
+
+        &:hover{
+            transform: perspective(500px) translate3d(-5px, -5px, 50px) !important;;
+        }
+
+        &.facebook{
+            background-color: #1877f2
+        }
+        &.linkedin{
+            background-color: #0a66c2;
+        }
+        &.github{
+            background-color: #6e5494;
+        }
+        &.whatsapp{
+            background-color: #25d366;
+        }
+    }
+}

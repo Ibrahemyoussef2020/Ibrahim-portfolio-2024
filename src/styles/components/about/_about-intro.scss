@@ -1,4 +1,114 @@
-.about{
+
+.about__intro{
+
+    margin: 50px 0 100px;
+
+    .wrapper{
+
+        display: flex;
+        align-items: flex-start;
+        gap: 3rem;
+
+        @media (min-width:900px){
+            gap: 6rem;
+
+            .about__img{
+                padding:1rem 3rem !important;
+                width: 350px !important;
+            }
+        }
+
+        .about__img{
+            width: 300px;
+            min-height: 350px;
+            padding:.5rem;
+            margin: auto;
+            border: 10px solid var(--subSpecial-color);
+        
+            img{
+                width:inherit;
+                min-height: 350px;
+                border: 1px solid #777;
+            }
+         }
+
+         .about_content{
+            
+            min-width: 320px;
+
+            h2{
+                font-size: 2.2rem;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                line-height: 1.7;
+                margin-bottom: 1rem;
+
+                span{
+                    color: var(--subSpecial-color);
+                    padding: 0 5px;
+                }
+            }
+
+            .list{
+               display: flex;
+               margin-bottom: 2rem;
+
+                li {
+                    position: relative;
+                    white-space: nowrap;
+                    width: fit-content;
+                    min-width:120px;
+                    padding-left:1rem;
+                    //border: 1px solid red;
+
+                    &:before{
+                        content:'';
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        width:5px;
+                        height:20px;    
+                        background:var(--subSpecial-color);
+                    
+                    }
+                }
+            }
+
+            .online-cv{
+                position: relative;
+                top: -5px;
+                background-color: var(--subSpecial-color);
+
+                &:hover{
+                    background-color:#666;
+                }
+            }
+
+         }
+    }
+}
+
+
+
+
+
+
+
+.about__skills{
+    padding-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+/*.about{
 
     .picture-info{
         margin-top: 3rem;
@@ -63,7 +173,7 @@
         display: flex;
         justify-content: center;
         gap: 1rem;
-        margin: 1rem 0 3rem;
+        margin: 1rem 0 120px;
 
         a{
             padding: .5rem 1rem;
@@ -143,3 +253,4 @@
         }
     }
 }
+*/

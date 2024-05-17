@@ -1,124 +1,169 @@
-
 .home__top{
-    height:450px;
-    margin: 2rem auto;
-    padding: 1rem;
-    display: flex;
-    align-items:center;
-    gap: 1rem;
-    border-bottom: 2px solid var(--light-Border);
 
-    @include min-width(760px){
-        border: 2px solid var(--light-Border);
-        border-radius: 1rem;
-    }
-    
-
-    .home__img{
-        height:415px;
-        position: relative;
-        z-index:5;
-
-        @include min-max-width(0,760px){
-            display: none;
-        }
-    }
-    img{
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.home__intro{
-    flex: 1;
-    .home__job{
-        max-width: 390px;
-        color: var(--mainSpecial-color);
-        font-size: 5rem;
-        font-weight: 400;
-        font-family: "Jersey 25", sans-serif;
-        line-height: 1;
-        span{
-            position: relative;
-            top: -30px;
-            font-family: tahoma;
-            font-size: 1.7rem;
-            font-weight: 600;
-            color: var(--subSpecial-color);
-            line-height: 30px;
-            white-space: nowrap;
-
-            @include min-max-width(0,760px){
-                font-size: 1.3rem;
-            }
-        }
-    }
-
-    .home__name{
-        position: relative;
-        top: .5rem;
-        font-size:15px;
-        letter-spacing: 1px;
-
-        span{
-            position: relative;
-            padding-left: 5px;
-        }
-
-        & span::before{
-            opacity: .5;
-            position: absolute;
-            content: '';
-            width: 3px;
-            height: 6px;
-            background: var(--mainTxt-color);
-            left: -12px;
-            top: -5px;
-            z-index: 0;
-            border-radius: 0 2px 2px 0;
-
-            animation: cofee-anim 1.3s ease-in-out forwards infinite;
-        }
-    }
-
-    .home-__desc{
-        position: relative;
-        top: -30px;
-        line-height: 2;
-        opacity: .9;
-        max-width: 450px;
-        font-size: 1.2rem;
-        font-weight: 700;
-        font-family: tahoma;
-        margin: 0 !important;
-    }
-}
-
-.home-top__contact{
-    flex:1;
-    height:410px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: .5rem;
-
-    .contact{
-        width:100%;
-        height: 40%;
-        aspect-ratio: 1 / 1;
-        background:#554949;
-        box-shadow: 1px 1px 1px 1px #37363541;
+    $large : 900px;
+ 
+    @include min-width($large){
+        padding: 4rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: row-reverse;
+        gap: 4rem;
+    }
+
+    margin-bottom: 100px;
+
+    .home__img{
+        flex: 1;
+        max-width: 400px;
+        aspect-ratio: 1 / 1;
+        -webkit-aspect-ratio: 1 / 1;
+        -moz-aspect-ratio: 1 / 1;
+        -o-aspect-ratio: 1 / 1;
+        border-radius:50%;
+        overflow: hidden;
+        border: 20px solid var(--mainSpecial-color) ;
+        outline: 3px solid #ccc;
+       /* outline: 10px solid #000;
+        box-shadow: -10px -10px 5px 5px var(--subSpecial-color) ,
+         10px 10px 5px 5px var(--subSpecial-color),
+         -10px 10px 5px 5px var(--subSpecial-color),
+         10px -10px 5px 5px var(--subSpecial-color); */
+
+         @include min-max-width(0,900px){
+            margin: 4rem auto 3rem;
+         }
+
+        img{
+           width: 100%;
+            height: 100%;
+        }
+    }
+
+    .home__intro{
+        flex: 1;
+        .home__name{
+
+            font-size: 1.2rem;
+            font-weight: 500;
+            
+
+            > span{
+                padding-left: .5rem;
+            }
+
+            .spec{
+                font-weight: 700;
+            }
+
+            @include min-width($large){
+                font-size: 2rem;
+            }
+        }
+
+        .home__job{
+            position: relative;
+            font-size: 2.5rem;
+            font-weight: 900;
+            //margin-bottom: .5rem;
+            max-width: fit-content;
+            /*background: linear-gradient(180deg, #fd2b6a 40% , #dd7290);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;*/
+
+            color: var(--mainSpecial-color);
+            
+
+            & span:not(.spec){
+             //   color: var(--mainTxt-color);
+             //   animation:home-job 2s linear infinite;
+                
+
+                @for $i from 1 through 10 {
+
+                    @if $i < 10 {
+                        &:nth-of-type(#{$i}){
+                            animation-delay:#{'0.'  + $i}s;
+                        }
+                    }  
+                }
+
+                &:nth-of-type(10){
+                    animation-delay: 1.1s;
+                }
+                &:nth-of-type(11){
+                    animation-delay: 1.2s;
+                }
+                &:nth-of-type(12){
+                    animation-delay: 1.3s;
+                }
+                &:nth-of-type(13){
+                    animation-delay: 1.4s;
+                }
+                &:nth-of-type(14){
+                    animation-delay: 1.5s;
+                }
+                &:nth-of-type(15){
+                    animation-delay: 1.6s;
+                }
+                &:nth-of-type(16){
+                    animation-delay: 1.7s;
+                }
+                &:nth-of-type(17){
+                    animation-delay: 1.8s;
+                }
+                &:nth-of-type(18){
+                    animation-delay: 1.9s;
+                }
+                &:nth-of-type(19){
+                    animation-delay: 2s;
+                }
+                &:nth-of-type(20){
+                    animation-delay: 2.1s;
+                }
+            }
+
+            @include min-max-width(0,$large){
+                margin-top: 1rem;
+                &:after{
+                    display: none;
+                }
+            }
+
+        }
+
+        .home-__desc{
+            font-size: 1.25rem;
+            line-height: 2;
+            margin-bottom: 1rem;
+            color: var(--subText-color);
+
+            .spec{
+                padding: 0 5px;
+            }
+        }
+
+    }
+
+    @include min-max-width(0,900px){
+        .home__name{
+            font-size: 1.3rem;
+        }
+        .home__job {
+            font-size: 1.7rem;
+
+            &:after{
+                bottom: 5px !important;
+            }
+        }
     }
 }
 
-@keyframes cofee-anim {
-    to{
-        top: -7px;
-        opacity: 0;
+@keyframes home-job {
+   /* 0%{
+        opacity: .1;
     }
+    100%{
+        opacity: 1;
+    } */
 }
-

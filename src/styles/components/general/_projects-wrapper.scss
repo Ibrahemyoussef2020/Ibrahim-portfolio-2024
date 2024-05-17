@@ -23,7 +23,6 @@
             gap: .5rem;
             button{
                 padding: .5rem .75rem;
-                background-color: var(--secondaryBg-color);
                 background-color: var(--subSpecial-color);
                 font-size: 1.3rem;
                 color: #fff;
@@ -39,6 +38,7 @@
     }
 
     .projects{
+        padding: 2rem 0 0;
         display: flex;
         gap: 1rem;
         justify-content: center;

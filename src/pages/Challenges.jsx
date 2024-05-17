@@ -16,7 +16,7 @@ const Challenges = () => {
         </p>
       </div>
       <div className="container">
-        <div className="cards flex-center">
+        <div className="solutions center-around">
         {
           challengesData.map((card,index) => 
           
@@ -29,12 +29,12 @@ const Challenges = () => {
             site={card.site}
             date={card.date}
             customClass={card.customClass}
+            obsClass={card.obsClass}
             link={card.link}
             story={card.story}
           />)
         }
         </div>
-        <Footer />
       </div>
     </div>
   )

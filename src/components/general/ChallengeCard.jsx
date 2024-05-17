@@ -10,44 +10,53 @@ const ChallengeCard = (props) => {
         site,
         date,
         customClass,
+        obsClass,
         link,
         story
     } = props;
+
+    console.log(obsClass);
 
     const [showStory,setShowStory] = useState(false);
     const { ref:challangesRef, inView:isChallangesVisible} = useInView({triggerOnce:true}); 
 
   return (
-    <article className={`solution ${showStory ? 'show-story' : ''}`}>
-        <div className={`hero ${customClass} flex-center`}>
+    <article className={`solution obs ${customClass} ${showStory ? 'show-story' : ''} ${isChallangesVisible ? obsClass : ''} }`}>
+        <a target='_blank' rel="noopener"  href={link}>
+        <div ref={challangesRef} className={`solution__hero obs`} style={{backgroundColor:'#000'}}>
+            
+            <div className="site-logo flex-center">
+                <img src={`/images/certifications/${site}.png`} alt=""  />
+            </div>
+            
 
-            <a 
-                href={link}
-                target='_blank'
-                rel="noreferrer"
-                className="visit-web flex-center full-size">
-
-            <i className="fa-solid fa-paperclip"></i>
-
-            </a>
-
-        <h3 ref={challangesRef} className={`main-skill obs trans-left ${isChallangesVisible ? 'back-to-place' : ''}`}>
-            {skill}    
-        </h3>
+            <h4>{site}</h4>
+            <div className="images">
+                <div className="back">
+                    <img src={`images/certifications/${skill}-back.webp`} alt="" />
+                </div>
+                <div className="front">
+                    <img src={`images/certifications/${skill}-front.webp`} alt="" />
+                </div> 
+            </div>                    
         </div>
-        <h4 className='sub-skill row'>{language}</h4>
-        <p className="level row">{level}</p>
-        <p className="solution__count row">Solved {solved} problems</p>
-        <button onClick={_=>setShowStory(!showStory)} className="solution__count row">Show Course story</button>
+        </a>
 
-        <div className="story">
-            <p>{story}</p>
+        <div className="solution__info center-between">
+            <h3>{skill} in {language}</h3>
         </div>
 
-        <div className="footer center-between">
-        <span className='web-name'>{site.slice(0,4)}<span className='special'>{site.slice(4)}</span></span>
-        <span className='date'>{date}</span>
+        <div className="solution__footer center-between">
+            <div className="previw flex-center">
+                <a  className="more__list" target='_blank' rel="noopener"  href={link}>
+                    Visit
+                </a>
+            </div>  
+            <div className="date flex-center">
+                <span>{date}</span>
+            </div>                 
         </div>
+
      </article>
   )
 }

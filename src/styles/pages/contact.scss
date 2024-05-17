@@ -1,79 +1,30 @@
-@import '../components/contact/contact-cyrcle';
+@import '../components/contact/contact-info';
 @import '../components/contact/send-mail';
 
 
 .contact{
     padding-top:8rem;
     min-height:calc(100vh - 50px);
+    
     & h1{
         text-align:center;
         font-weight:900;
     }
-}
 
+    & h2{
+        text-transform: uppercase;
+    }
 
+    .container > p{
+        line-height: 2;
+    }
 
-.lists{
-    width:100%;
-    max-width:650px;
-    margin:0 auto;
-    display:flex;
-    align-items:center;
-    flex-wrap:wrap;
-}
-
-
-
-.bull-ul{
-    margin: 1rem 0;
-    flex:1;
-    display: flex;
-    justify-content: center;
-    gap:3rem;
-}
-
-.contact-ul{
-    max-width:300px;
-    height: 100%;
-    padding:1rem 0 0 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-
-.contact li{
-    position: relative;
-    width: fit-content;
-    padding-left: 20px;
-    margin-bottom:1.5rem;
-    display:flex;
-    flex-direction:column;
-    gap:2px; 
-    
-    & > span:first-child{
-        width:50px;
-        font-size:15px;
-        font-weight:600;
-        opacity:.8;
-    };
-
-    & > span:last-child{
-        padding-left:5px;
-        font-size:15px;
-    };
-
-    &:before{
-        content:'';
-        position:absolute;
-        left:9px;
-        top:0;
-        width:4px;
-        height:20px;
-        background:var(--subSpecial-color);
+    .contact__content{
+        padding: 3rem 0;
+        gap: 3rem;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
     }
 }
-
-
-
 

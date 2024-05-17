@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
-import {ModeContext, NanigateContext} from '../../App'
+import {ModeContext, NanigateContext , NavigatorContext} from '../../App'
 import { useNavigate } from 'react-router';
 
-const Header = ({isVisibleNav,setIsVisibleNav}) => {
+const Header = () => {
 
   const {mode , setMode} =  useContext(ModeContext);
 
@@ -12,7 +12,8 @@ const Header = ({isVisibleNav,setIsVisibleNav}) => {
     setMode(()=> localStorage.getItem('mode'));
   }
 
-  const {pageClass,setPageClass} = useContext(NanigateContext)
+  const {pageClass,setPageClass} = useContext(NanigateContext);
+  const {isVisibleNav , setIsVisibleNav} = useContext(NavigatorContext);
 
   const navigate = useNavigate() ; 
   
@@ -28,7 +29,7 @@ const moveToRoutFromRouts = (e,page)=>{
 }
 
   return (
-    <header className='main-section'>
+    <header className='main-section' id='main-header'>
       <div className="container">
         <div className='header-wrapper center-between'>
             <div className="left center-between">

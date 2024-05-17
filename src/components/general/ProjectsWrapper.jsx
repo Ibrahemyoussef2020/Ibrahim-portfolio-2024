@@ -4,6 +4,8 @@ import { homeProjectsData, projectsData } from '../../data/progectsData';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router';
 import { NanigateContext } from '../../App';
+import NextSection from './NextSection';
+import { Link } from 'react-router-dom';
 
 const ProjectsWrapper = ({place='projects' }) => {
     const [mainSkill,setMainSkill] = useState('all');
@@ -26,7 +28,7 @@ const ProjectsWrapper = ({place='projects' }) => {
   return (
     <section  className={`projects-wrapper`}>
       <div className="header center-between">
-          <h2 className="left">My Projects</h2>
+          <h2 className="left">My <span className='spec'>Projects</span></h2>
           
           <div className='filters'>
               <button className={mainSkill === 'all' ? 'selected' : ''} onClick={_=>setMainSkill('all')}>All</button>
@@ -72,9 +74,13 @@ const ProjectsWrapper = ({place='projects' }) => {
       </div>
 
       {place === 'home' ? <div className="more-items projects">
-          <a href="/projects" onClick={e => moveToRoutFromRouts(e,'projects')}>More Projects</a>
-      </div> : null}
-
+        <div className='btns more-items projects'>
+                  <Link to='/projects' className="main-btn" onClick={e => moveToRoutFromRouts(e, 'projects')}>
+                      <span>More Projects </span> <i className="fa-solid fa-angles-right"></i>
+                  </Link>
+                  <NextSection link='home__challenges' />
+              </div>
+        </div> : null}
     </section>
   )
 }
