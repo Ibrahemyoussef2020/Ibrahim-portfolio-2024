@@ -41,8 +41,8 @@ const HomeIntro = () => {
                 </h1>
 
                 <p className='home-__desc'>
-                    I am a graduate of the College of Education, Department of Educational <span className='spec'>Technology , </span>
-                    I'm starving to build amazing and beautiful web applications with a clean code via using solid principles and design pattern and most of clean code's roles
+                <span className='upper'>I'M</span> a graduate of the College of Education, Department of Educational <span className='spec'>Technology , </span>
+                    <span className='upper'>I'M</span> starving to build amazing and beautiful web applications with a clean code via using solid principles and design pattern and most of clean code's roles
                 </p>
 
                 <SocialBar />

@@ -17,7 +17,7 @@ const AboutInfo = () => {
                 <div ref={aboutRef} className={`about_content flex-1  obs trans trans-left ${isAboutVisible ? 'back-to-place' : ''}`}>
                     <h2> About <span className='spec'>ME</span> </h2>
                     <p>
-                    I'm a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
+                    <span className='upper'>I'M </span> a Frontend Focused Web Developer building and managing the Front-end of Websites and Web Applications that leads to the success of the overall product. Check out some of my work in the Projects section.
                     </p>
                     <p>
                         I have learned some code startegy as<span>design pattern</span>, <span>solid prinsiples</span> and many roles of <span>clean code</span> and I have compeleted several projects with these roles you can look at the last projects code on my <a target='_blank' rel="noreferrer"  href='https://github.com/Ibrahemyoussef2020'>Github</a> in 2024 

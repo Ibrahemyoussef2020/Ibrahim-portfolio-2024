@@ -42,7 +42,7 @@ const Contact = () => {
           Get In <span className='spiceal'> Touch </span> 
         </h1>
         <p className='text-center'>
-          I’M <span>ALWAYS OPEN TO DISCUSS PRODUCT DESIGN WORK OR PARTNERSHIPS</span>
+         <span className='upper'>I’M  </span>ALWAYS OPEN TO DISCUSS PRODUCT DESIGN WORK OR PARTNERSHIPS
         </p>
       
         <div className='contact__content center-around'>

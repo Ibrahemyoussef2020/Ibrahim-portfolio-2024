@@ -114,6 +114,10 @@ p{
     text-transform: lowercase;
 }
 
+span.upper{
+    text-transform: uppercase;
+}
+
 /* classes */
 
   .spec{
@@ -269,7 +273,7 @@ p{
 
 .obs{
     transition-property: transform !important;
-    transition-duration: .3s !important;
+    transition-duration: .4s !important;
     transition-timing-function: ease-in-out !important;
 }
 
