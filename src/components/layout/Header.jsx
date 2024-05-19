@@ -17,23 +17,13 @@ const Header = () => {
 
   const navigate = useNavigate() ; 
   
-const moveToRoutFromRouts = (e,page)=>{
-    e.preventDefault();
-
-    setPageClass('page-anim');
-    navigate(`${page}`)
-
-    setTimeout(()=>{
-        setPageClass('');
-    },1000)
-}
 
   return (
     <header className='main-section' id='main-header'>
       <div className="container">
         <div className='header-wrapper center-between'>
             <div className="left center-between">
-                <a href="/" onClick={e => moveToRoutFromRouts(e,'/')} className="logo colors-trans">
+                <a href="/" className="logo colors-trans">
                   <span>
                   <i className="fa-solid fa-mug-saucer"></i>
                   </span>

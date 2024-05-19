@@ -42,7 +42,7 @@ const Contact = () => {
           Get In <span className='spiceal'> Touch </span> 
         </h1>
         <p className='text-center'>
-          I’M ALWAYS OPEN TO DISCUSS PRODUCT DESIGN WORK OR PARTNERSHIPS
+          I’M <span>ALWAYS OPEN TO DISCUSS PRODUCT DESIGN WORK OR PARTNERSHIPS</span>
         </p>
       
         <div className='contact__content center-around'>
@@ -102,22 +102,22 @@ const Contact = () => {
               >
                 
               <div className='input-wrapper'>
-                <h3>Enter Your Name *</h3>
-                <input type="text" name='name' onChange={e => handleMessageInfoChange(e)} required/>
+                <label htmlFor='name'>Enter Your Name *</label>
+                <input type="text" id='name' name='name' onChange={e => handleMessageInfoChange(e)} required/>
               </div>
               <div className='input-wrapper'>
-                <h3>Enter Your Email *</h3>
-                <input type="text" name='email' onChange={e => handleMessageInfoChange(e)} required/>
+                <label htmlFor='email'>Enter Your Email *</label>
+                <input type="text" id='email' name='email' onChange={e => handleMessageInfoChange(e)} required/>
               </div>
               <div className='input-wrapper'>
-                <h3>Enter Msg Title *</h3>
-                <input type="text" name='title' onChange={e => handleMessageInfoChange(e)} required/>
+                <label htmlFor='title'>Enter Msg Title *</label>
+                <input type="text" id='title' name='title' onChange={e => handleMessageInfoChange(e)} required/>
               </div>
               <div className='input-wrapper'>
-                <h3>Enter Your Phone</h3>
-                <input type="text" name='phone' onChange={e => handleMessageInfoChange(e)}/>
+                <label htmlFor='phone'>Enter Your Phone</label>
+                <input type="text" id='phone' name='phone' onChange={e => handleMessageInfoChange(e)}/>
               </div>
-              <textarea type="text" name='message' onChange={e => handleMessageInfoChange(e)} required>
+              <textarea type="text" id='message' name='message' onChange={e => handleMessageInfoChange(e)} required>
               </textarea>
               <button type='submit' onClick={handleSubmitMessage}>
                 Submit

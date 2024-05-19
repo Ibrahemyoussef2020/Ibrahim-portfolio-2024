@@ -29,14 +29,9 @@
                 min-height:50px;
             }
     
-            &:has(input:focus){
-                h3{
-                    opacity: 0;
-                }
-            }
         }
         
-        & div h3{
+        & div label{
             position: absolute;
             top:-1rem;
             left:.5rem;

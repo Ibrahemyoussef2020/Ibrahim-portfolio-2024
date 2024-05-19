@@ -6,7 +6,6 @@
     min-width: 227px;
     flex: 1;
     color: #000;
-
     border: 1px solid #888;
 
     
@@ -31,6 +30,7 @@
         width: 40px;
         background-color: #fff;
         border-radius: 25px;
+        transition: transform .3s ease-in-out;
         
 
         img{
@@ -130,6 +130,7 @@
         color: #fff;
         text-align: center;
         border-radius:25px;
+        transition: background-color .3s ease-in-out , color .3s ease-in-out ;
     }
 }
 
@@ -142,7 +143,11 @@
     }
 
     &:hover{
-        transform:perspective(500px)translate3d(-5px,-5px,25px);
+        .previw {
+            border: 2px solid #fff;
+            background-color:#fff;
+            color: #000;
+        }
     }
 }
 

@@ -22,8 +22,8 @@ const Project = (props) => {
   return (
     <article className={`project ${showOptions ? 'show-options' : ''}`}>
         <a target='_blank' rel="noopener"  href={preview}>
-        <div ref={heroRef} className={`project__hero obs scalable ${isHeroVisible ? 'scale' : ''}`} style={{backgroundColor:color}}>
-            <div className="images">
+        <div className={`project__hero`} style={{backgroundColor:color}}>
+            <div ref={heroRef} className={`images obs scalable ${isHeroVisible ? 'scale' : ''}`}>
                 <div className="back">
                     <img src={`images/projects/${title}-back.webp`} alt="" />
                 </div>

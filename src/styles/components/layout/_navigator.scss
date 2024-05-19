@@ -11,7 +11,7 @@
         display: flex;
         background-color:var(--secondaryBg-color);
         z-index: 1000;
-        transition:clip-path .7s ease-in-out;
+        transition:clip-path .5s ease-in-out;
         max-height: 600px;
     }
 
@@ -64,7 +64,7 @@
             display: flex;
             gap: .5rem;
             justify-content: space-evenly;
-            transition:  clip-path 1.5s ease-in-out;
+            transition:  clip-path .3s ease-in-out;
             margin-top: 1.5rem;
             font-size: 2rem;
 
@@ -92,29 +92,28 @@
         .navigator__clip{
             clip-path: circle(0px);
             
-            transition-delay: 2.2s !important;
-    
+            transition-delay: .2s !important;
     
             li{
                 opacity: 0 !important;
             }
     
             li:first-of-type{
-                transition-delay: .2s;
+                transition-delay: .1s;
             }
             li:nth-of-type(2){
-                transition-delay: .4s;
+                transition-delay: .2s;
             }
             li:nth-of-type(3){
-                transition-delay: .6s;
+                transition-delay: .3s;
             }
             li:nth-of-type(4){
-                transition-delay: .8s;
+                transition-delay: .4s;
             }
     
             .navigator__socials{
                 clip-path: circle(0%) !important;
-                transition-delay: 1s;
+                transition-delay: .2s;
             }
         }
     }
@@ -130,21 +129,21 @@
             }
     
             li:first-of-type{
-                transition-delay: 1.5s;
+                transition-delay: .1s;
             }
             li:nth-of-type(2){
-                transition-delay: 1.2s;
+                transition-delay: .2s;
             }
             li:nth-of-type(3){
-                transition-delay: .9s;
+                transition-delay: .3s;
             }
             li:nth-of-type(4){
-                transition-delay: .6s;
+                transition-delay: .4s;
             }
     
             .navigator__socials{
                 clip-path: circle(100%) !important;
-                transition-delay:2s;
+                transition-delay:.4s;
             }
         }
     }

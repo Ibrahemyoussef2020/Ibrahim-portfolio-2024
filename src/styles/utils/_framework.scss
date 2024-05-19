@@ -102,6 +102,10 @@ button{
     cursor: pointer;
 }
 
+label{
+    cursor: text;
+}
+
 ul{
     list-style: none;
 }
@@ -265,7 +269,7 @@ p{
 
 .obs{
     transition-property: transform !important;
-    transition-duration: .5s !important;
+    transition-duration: .3s !important;
     transition-timing-function: ease-in-out !important;
 }
 
@@ -276,13 +280,11 @@ p{
 
 .scalable{
     transform-origin: center center;
-    transform: scale3d(0,0,0);
-    opacity: 0;
+    transform: scale3d(0 , 0, 0);
 }
 
 .scale{
     transform: scale3d(1,1,1);
-    opacity: 1;
 }
 
 .trans-right{

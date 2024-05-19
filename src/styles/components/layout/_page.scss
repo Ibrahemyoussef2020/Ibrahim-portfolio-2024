@@ -1,8 +1,9 @@
 
 .page-anim{
     transform-origin: center right;
-    animation: navigate 1s linear;
+    animation: navigate .6s linear;
 }
+
 
 @keyframes navigate {
     0%{

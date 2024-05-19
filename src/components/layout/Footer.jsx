@@ -22,7 +22,7 @@ const Footer = () => {
             <a ref={footerRef} className={` social flex-center obs trans-right ${isFooterVisible ? 'back-to-place' : ''}`} target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/ibrahim-youssef-2a65b1261/">
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
-            <a ref={footerRef} className={` social flex-center obs trans-right ${isFooterVisible ? 'back-to-place' : ''}`} target="_blank" rel="noreferrer" href="https://github.com/Ibrahemyoussef2020">
+            <a ref={footerRef} className={` social flex-center obs scalable del-lg ${isFooterVisible ? 'scale' : ''}`} target="_blank" rel="noreferrer" href="https://github.com/Ibrahemyoussef2020">
                 <i className="fa-brands fa-github"></i>
             </a>
             <a ref={footerRef} className={` social flex-center obs scalable del-lg ${isFooterVisible ? 'scale' : ''}`}  target="_blank" rel="noreferrer" href="tel:01147359396">

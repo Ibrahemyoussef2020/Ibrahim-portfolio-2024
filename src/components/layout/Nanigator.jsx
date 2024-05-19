@@ -10,15 +10,8 @@ const Nanigator = ({isVisibleNav,setIsVisibleNav}) => {
 
   const moveToRoutFromNav = (e,page)=>{
     e.preventDefault();
-
+    navigate(`${page}`)
     setIsVisibleNav(false);
-    setTimeout(()=>{
-        setPageClass('page-anim');
-        navigate(`${page}`)
-    },3000)
-    setTimeout(()=>{
-        setPageClass('');
-    },4000)
 }
 
   return (
