@@ -21,6 +21,9 @@
     justify-content: center;
     align-items: flex-end;
     overflow: hidden;
+    color: #fff;
+    transition: background-color .5s ease-in-out , color .5s ease-in-out ;
+
 
     .site-logo{
         padding: 2px;
@@ -45,7 +48,7 @@
         left: 10px;
         font-size: 1rem;
         font-weight: 400;
-        color: #fff;
+        color:inherit;
     }
 
     .images{
@@ -148,6 +151,12 @@
             background-color:#fff;
             color: #000;
         }
+
+        .solution__hero{
+            background-color: #fff !important;
+            color: #000;
+        }
+
     }
 }
 
