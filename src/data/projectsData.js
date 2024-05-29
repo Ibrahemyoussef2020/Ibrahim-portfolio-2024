@@ -38,7 +38,7 @@ export const projectsData =[
             {title:'typescript',type:'type'},
             {title:'sass',type:'style'},
         ],
-        preview:'https://brand-ecommerce-alpha.vercel.app/',
+        preview:'https://brand-f72ujnu9f-ibrahemyoussef2020s-projects.vercel.app/',
         code:'https://github.com/Ibrahemyoussef2020/Brand-ecommerce',
     },
     {
@@ -348,8 +348,8 @@ export const homeProjectsData = [
             {title:'typescript',type:'type'},
             {title:'sass',type:'style'},
         ],
-        preview:'https://brand-ecommerce-alpha.vercel.app/',
-        code:'https://github.com/Ibrahemyoussef2020/Brand-ecommerce',
+        preview:'https://brand-f72ujnu9f-ibrahemyoussef2020s-projects.vercel.app/',
+        code:'https://github.com/Ibrahemyoussef2020/brand',
     },
     {
         color:'#c0cddd',

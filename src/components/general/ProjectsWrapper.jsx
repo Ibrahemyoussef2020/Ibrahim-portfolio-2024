@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Project from './Project';
-import { homeProjectsData, projectsData } from '../../data/progectsData';
+import { homeProjectsData, projectsData } from '../../data/projectsData';
 import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router';
 import { NanigateContext } from '../../App';
