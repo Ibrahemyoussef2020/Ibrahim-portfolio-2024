@@ -12,7 +12,7 @@ const AboutInfo = () => {
         <div className="container">
             <div className="wrapper flex-wrap">           
                 <div ref={aboutRef} className={`about__img obs trans trans-right ${isAboutVisible ? 'back-to-place' : ''}`}>
-                    <img src="images/ibrahem.webp" alt="" />
+                    <img src="images/ibrahim-about.webp" alt="" />
                 </div>
                 <div ref={aboutRef} className={`about_content flex-1  obs trans trans-left ${isAboutVisible ? 'back-to-place' : ''}`}>
                     <h2> About <span className='spec'>ME</span> </h2>

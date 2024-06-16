@@ -9,6 +9,8 @@ const Layout = () => {
   const {isVisibleNav , setIsVisibleNav} = useContext(NavigatorContext);
 
   return (
+    <>
+    <span id='to-top'></span>
     <div className={`layout full-screen ${isVisibleNav ? 'open-nav' : 'close-nav'}`}>
       <Header isVisibleNav={isVisibleNav} setIsVisibleNav={setIsVisibleNav} />
       <div className={`page main-section ${pageClass}`}  >
@@ -17,6 +19,7 @@ const Layout = () => {
       </div>
       <Footer />
     </div>
+    </>
   )
 }
 

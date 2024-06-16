@@ -15,15 +15,16 @@
 
     .home__img{
         flex: 1;
-        max-width: 400px;
-        aspect-ratio: 1 / 1;
+        max-width: 350px;
+        aspect-ratio: 1 / 1.3;
         -webkit-aspect-ratio: 1 / 1;
         -moz-aspect-ratio: 1 / 1;
         -o-aspect-ratio: 1 / 1;
         border-radius:50%;
         overflow: hidden;
-        border: 20px solid var(--mainSpecial-color) ;
-        outline: 3px solid #ccc;
+        border: 3px solid var(--mainSpecial-color) ;
+        border-radius: 0 !important;
+        outline: 2px solid #ccc;
 
          @include min-max-width(0,900px){
             margin: 4rem auto 3rem;

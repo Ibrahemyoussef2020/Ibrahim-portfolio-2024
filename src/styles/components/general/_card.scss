@@ -149,7 +149,7 @@
                 background-color: var(--projectBg-color);
                 border:1px solid #999;
                 border-radius: 7px;
-                opacity: 0;
+                display: none;
                 transition: opacity .3s ease-in-out;
 
                 a {
@@ -165,7 +165,6 @@
                         border-bottom:1px solid #999;
                     }
                 }
-                display: block;
             }
     
             .more__list{
@@ -184,7 +183,7 @@
 .project.show-options{
     .more{
         .more__options{
-            opacity: 1 !important;
+            display: block;
         }
     }
 }

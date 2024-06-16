@@ -83,8 +83,6 @@ body{
     min-height: 100vh;
     background-color:var(--mainBg-color);
     color: var(--mainTxt-color);
-    overflow: hidden;
-    perspective: 1000px;
 }
 
 /* reset */
@@ -215,7 +213,6 @@ span.upper{
 .page {
     position: relative;
     background:var(--mainBg-color);
-   overflow: hidden;
 }
 
 .home{
@@ -223,10 +220,6 @@ span.upper{
     background:transparent;
     overflow: hidden;
     z-index: 0;
-}
-
-.container{
-    
 }
 
 

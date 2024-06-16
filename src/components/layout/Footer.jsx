@@ -13,7 +13,7 @@ const Footer = () => {
     <>
     <footer id='main-footer' className='main-footer'>
 
-      <HashLink className='to-top' to='#main-header'>
+      <HashLink className='to-top' to='#to-top'>
       <i ref={topBtnRef} className={`fa-solid fa-angles-up ${isTopBtnVisible ? 'go' : ''}`}></i>
       </HashLink>
 
