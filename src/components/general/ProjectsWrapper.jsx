@@ -32,6 +32,7 @@ const ProjectsWrapper = ({place='projects' }) => {
           
           <div className='filters'>
               <button className={mainSkill === 'all' ? 'selected' : ''} onClick={_=>setMainSkill('all')}>All</button>
+              <button className={mainSkill === 'react' ? 'selected' : ''} onClick={_=>setMainSkill('next')}>Next</button>
               <button className={mainSkill === 'react' ? 'selected' : ''} onClick={_=>setMainSkill('react')}>React</button>
               <button className={mainSkill === 'html' ? 'selected' : ''} onClick={_=>setMainSkill('html')}>Html</button>
           </div>
