@@ -10,7 +10,7 @@ const HomeIntro = () => {
   return (
     <section id='home__top' className='home__top' ref={topRef}>
             <div className={`home__img obs trans-bottom ${isTopVisible ? 'back-to-place' : '' }`}>
-                <img src="images/ibrahim-home.webp" alt="" />
+                <img src="images/ibrahim-about.webp" alt="" />
             </div>
 
             <div className={`home__intro obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
