@@ -89,6 +89,11 @@ body{
     color: var(--mainTxt-color);
 }
 
+.app:has(.open-nav){
+    overflow: hidden;
+    max-height: 100vh;
+}
+
 /* reset */
 
 a{
