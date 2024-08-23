@@ -22,7 +22,7 @@ export const projectsData =[
         structure:'next',
         skills:[
             {title:'next', type:'spa'},
-            {title:'redux',type:'style'},
+            {title:'tailwind',type:'style'},
             {title:'sass',type:'store'}
         ],
         preview:'https://brand-ecommerce-front.vercel.app/',
