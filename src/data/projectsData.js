@@ -15,20 +15,6 @@ export const projectsData =[
         code:'https://github.com/Ibrahemyoussef2020/twasal',
     },
     {
-        color:'#4d74ff',
-        title:'brand ecommerce',
-        web:'site',
-        date:'14-3-2024',
-        structure:'next',
-        skills:[
-            {title:'next', type:'spa'},
-            {title:'tailwind',type:'style'},
-            {title:'sass',type:'store'}
-        ],
-        preview:'https://brand-ecommerce-front.vercel.app/',
-        code:'https://github.com/Ibrahemyoussef2020/brand-Ecommerce-front',
-    },
-    {
         color:'#c0cddd',
         title:'3idak',
         web:'site',
