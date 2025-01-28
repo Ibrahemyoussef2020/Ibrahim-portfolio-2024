@@ -19,6 +19,10 @@
 
     --layoutBg:#2b4352;
 
+
+    max-width:100vw;
+    overflow:hidden;
+
 }
 
 
@@ -44,7 +48,7 @@
 :root .app.light{
     --bright-color:#fff;
     --against-color:#000;
-    --mainBg-color:#fefefe;
+    --mainBg-color:#ddd;
     --secondaryBg-color:#ddd;
     --projectBg-color:#4a402e;
     --algorithmBg-color:#4a402e;
@@ -83,6 +87,11 @@ body{
     min-height: 100vh;
     background-color:var(--mainBg-color);
     color: var(--mainTxt-color);
+}
+
+.app:has(.open-nav){
+    overflow: hidden;
+    max-height: 100vh;
 }
 
 /* reset */

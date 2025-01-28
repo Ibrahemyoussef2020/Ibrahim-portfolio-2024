@@ -1,6 +1,20 @@
 
 export const projectsData =[
     {
+        color:'#0a7834eb',
+        title:'twasal',
+        web:'site',
+        date:'25-07-2024',
+        structure:'next',
+        skills:[
+            {title:'next', type:'spa'},
+            {title:'talwind',type:'style'},
+            {title:'firebase',type:'store'}
+        ],
+        preview:'https://twasal.vercel.app/',
+        code:'https://github.com/Ibrahemyoussef2020/twasal',
+    },
+    {
         color:'#c0cddd',
         title:'3idak',
         web:'site',
@@ -324,18 +338,32 @@ export const projectsData =[
 
 export const homeProjectsData = [
     {
-        color:'#4d74ff',
-        title:'brand ecommerce',
+        color:'#0a7834eb',
+        title:'twasal',
         web:'site',
-        date:'14-3-2024',
+        date:'25-07-2024',
         structure:'next',
         skills:[
             {title:'next', type:'spa'},
-            {title:'typescript',type:'type'},
-            {title:'sass',type:'style'},
+            {title:'talwind',type:'style'},
+            {title:'firebase',type:'store'}
         ],
-        preview:'https://brand-ecommerce-front.vercel.app/',
-        code:'https://github.com/Ibrahemyoussef2020/brand-Ecommerce-front',
+        preview:'https://twasal.vercel.app/',
+        code:'https://github.com/Ibrahemyoussef2020/twasal',
+    },
+    {
+        color:'#232f3e',
+        title:'amazon clone',
+        web:'site',
+        date:'11-12-2023',
+        structure:'react',
+        skills:[
+            {title:'react', type:'spa'},
+            {title:'tailwind',type:'style'},
+            {title:'redux',type:'store'}
+        ],
+        preview:'https://amazon-clone-frontend-frw6.onrender.com/',
+        code:'https://github.com/Ibrahemyoussef2020/amazon-clone-frontend',
     },
     {
         color:'#c0cddd',
@@ -364,20 +392,6 @@ export const homeProjectsData = [
         ],
         preview:'https://dashboard-gym-frontend.onrender.com/',
         code:'https://github.com/Ibrahemyoussef2020/gym',
-    },
-    {
-        color:'#232f3e',
-        title:'amazon clone',
-        web:'site',
-        date:'11-12-2023',
-        structure:'react',
-        skills:[
-            {title:'react', type:'spa'},
-            {title:'tailwind',type:'style'},
-            {title:'redux',type:'store'}
-        ],
-        preview:'https://amazon-clone-frontend-frw6.onrender.com/',
-        code:'https://github.com/Ibrahemyoussef2020/amazon-clone-frontend',
     },
     {
         color:'#7754f6',
