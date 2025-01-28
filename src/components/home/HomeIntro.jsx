@@ -10,7 +10,7 @@ const HomeIntro = () => {
   return (
     <section id='home__top' className='home__top' ref={topRef}>
             <div className={`home__img obs trans-bottom ${isTopVisible ? 'back-to-place' : '' }`}>
-                <img src="images/ibrahim-home.webp" alt="" />
+                <img src="images/ibrahim-about.webp" alt="" />
             </div>
 
             <div className={`home__intro obs trans-right ${isTopVisible ? 'back-to-place' : '' }`}>
@@ -48,7 +48,7 @@ const HomeIntro = () => {
                 <SocialBar />
 
                 <div className='btns'>
-                    <a className="main-btn cv" href='/cv/Ibrahim Youssef.pdf' download>
+                    <a className="main-btn cv" href='/cv/ibrahimYoussef_cv.pdf' download>
                         <span>download cv</span> <i className="fa-solid fa-cloud-arrow-down"></i>
                     </a>
 
