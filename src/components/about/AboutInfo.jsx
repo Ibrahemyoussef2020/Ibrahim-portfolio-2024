@@ -37,7 +37,7 @@ const AboutInfo = () => {
                     <SocialBar />
 
                     <div className='btns'>
-                    <a className="main-btn cv" href='/cv/Ibrahim Youssef.pdf' download>
+                    <a className="main-btn cv" href='/cv/ibrahim-youssef-cv.pdf' download>
                         <span>download cv</span> <i className="fa-solid fa-cloud-arrow-down"></i>
                     </a>
                     <NextSection link='about__skills' />

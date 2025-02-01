@@ -48,7 +48,7 @@ const HomeIntro = () => {
                 <SocialBar />
 
                 <div className='btns'>
-                    <a className="main-btn cv" href='/cv/ibrahimYoussef_cv.pdf' download>
+                    <a className="main-btn cv" href='/cv/ibrahim-youssef-cv.pdf' download>
                         <span>download cv</span> <i className="fa-solid fa-cloud-arrow-down"></i>
                     </a>
 
