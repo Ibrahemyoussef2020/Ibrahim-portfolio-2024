@@ -43,7 +43,7 @@ const AboutInfo = () => {
                     <NextSection link='about__skills' />
                     </div>
 
-                    <a className="main-btn online-cv" href='/'>
+                    <a className="main-btn online-cv" target='_blank' href='https://docs.google.com/document/d/1OpTx2rHFgIsdzpyAOVOzCVN45Zo-MEFf/edit?usp=sharing&ouid=111062119869333576433&rtpof=true&sd=true'>
                         <span>Online CV</span> <i className="fa-solid fa-angles-right"></i>
                     </a>
                 </div>
